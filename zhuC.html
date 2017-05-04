@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>注册列表</title>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/zhuC.css" type="text/css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/xuqiufabu/xlogo.png" media="screen" />
+<!--
+    <!–[if IE]>
+    <script src=”http://html5shiv.googlecode.com/svn/trunk/html5.js”></script>
+    <![endif]–>
+-->
+
+</head>
+<body>
+<div class="tuceng" id="tuceng">
+    <a href="index.html"> < 返回首页</a>
+    <div class="neiR" id="neiR">
+        <ul>
+            <li class="geren" id="geren">会员注册<i></i></li>
+          <!--  <li class="qiye" id="qiye">企业会员注册<i></i></li>-->
+        </ul>
+        <div class="gr" id="gr">
+            <p>提交个人注册信息</p>
+            <div class="yongH form-group">
+                <label for="yongh">用户名</label>
+                <input type="text" class="reght" name=" " id="yongh" value="" placeholder="6-18位英文字母或数字" />
+            </div>
+            <div class="miM">
+                <label for="mima">密码</label>
+                 <input type="password"  class="reght" name="" id="mima" value="" placeholder="6-18个字符，可使用字母 ,数字,下划线" />
+            </div>
+            <div class="queR">
+                <label for="queren">确认密码</label>
+                 <input type="password"  class="reght" name="" id="queren" value="" placeholder="确认密码" />
+            </div>
+            <div class="dinZ">
+                <label for="dian_z">电子邮箱</label>
+                <input type="email" class="" id="dian_z" placeholder="请填写有效邮箱" />
+            </div>
+            <span class="name">
+                <p class="x">性别</p>
+                <input type="radio" name="gender" value="1" checked="checked"/>
+                <p>男</p>
+                <input type="radio" name="gender" value="0" checked="checked"/>
+                <p>女</p>
+            </span>
+
+
+          <!--  <div class="suoZ">
+                &lt;!&ndash;    <label for="suozai">&nbsp;所在地区</label>
+                   <input  type="number" name="province" />
+                   <input  type="number" name="city" /> &ndash;&gt;
+                <label>&nbsp;所在地区</label>
+                省：<select name="province" id="to_cn" onchange="set_city(this, document.getElementById('city')); WYL();" class=login_text_input >
+                <option value=0>请选择</option>
+                <option value=台湾>台湾</option>
+                <option value=北京>北京</option>
+                <option value=上海>上海</option>
+                <option value=天津>天津</option>
+                <option value=重庆>重庆</option>
+                <option value=河北省>河北省</option>
+                <option value=山西省>山西省</option>
+                <option value=辽宁省>辽宁省</option>
+                <option value=吉林省>吉林省</option>
+                <option value=黑龙江省>黑龙江省</option>
+                <option value=江苏省>江苏省</option>
+                <option value=浙江省>浙江省</option>
+                <option value=安徽省>安徽省</option>
+                <option value=福建省>福建省</option>
+                <option value=江西省>江西省</option>
+                <option value=山东省>山东省</option>
+                <option value=河南省>河南省</option>
+                <option value=湖北省>湖北省</option>
+                <option value=湖南省>湖南省</option>
+                <option value=广东省>广东省</option>
+                <option value=海南省>海南省</option>
+                <option value=四川省>四川省</option>
+                <option value=贵州省>贵州省</option>
+                <option value=云南省>云南省</option>
+                <option value=陕西省>陕西省</option>
+                <option value=甘肃省>甘肃省</option>
+                <option value=青海省>青海省</option>
+                <option value=内蒙古>内蒙古</option>
+                <option value=广西>广西</option>
+                <option value=西藏>西藏</option>
+                <option value=宁夏>宁夏</option>
+                <option value=新疆>新疆</option>
+                <option value=香港>香港</option>
+                <option value=澳门>澳门</option>
+            </select>  市：
+                <select id="city" class=login_text_input name="shi">
+                    <option value=0>请选择</option>
+                </select>
+                &lt;!&ndash; <input  type="number" class="reght" name="" id="suozai" /> &ndash;&gt;
+            </div>-->
+
+            <div class="suoZ">
+                <label>所在地区</label>
+                <select id="selProvince" name="province">
+                </select>
+                <select id="selCity" name="city">
+                </select>
+                <select id="selDist" name="area">
+                </select>
+            </div>
+
+
+            <div class="yanZheng" runat="server">
+                <label for="inputCode">验证码</label>
+                <input type="text" class="" id="inputCode" /><div class="code" id="checkCode" onclick="createCode()" ></div><a href="javascript:;" onclick="createCode()">看不清楚  换一张</a>
+            </div>
+            <div class="shouJ">
+                 <label for="queren">手机号</label>
+                 <input type="number" class="" id="shou_j" placeholder="有效的手机号"/>
+            </div>
+            <div class="duanX">
+                <label for="yanZ">短信验证码</label>
+                <input type="number" id="yanZ" placeholder="填写验证码"/>  <button type="submit" class="dengLu" >获取验证码</button>
+            </div>
+
+
+
+            <div class="spanf">
+                <div class="spanf-1">
+                    <input name="items" id="idr" type="checkbox">
+                    <p for="idr">我已阅读并同意协议</p>
+                </div>
+                <div class="spanf-2">
+                    <div class="theme-buy">
+                        <a class="btn btn-primary btn-large theme-login" href="javascript:;">《梧桐时代用户注册协议》</a>
+                    </div>
+                    <div class="theme-popover">
+                        <div class="theme-poptit">
+                            <a href="javascript:;" title="关闭" class="close">×</a>
+                            <h3>梧桐时代服务条款</h3>
+                        </div>
+                        <div class="www">
+                            <h4>1、服务概述</h4>
+
+                            <p>本服务条款是开发者（您）与北京梧桐时代科技有限责任公司（下称梧桐时代）之间的协议。</p>
+                            <p>1.1重要须知：梧桐时代在此特别提醒，开发者（您）欲访问和使用梧桐时代平台网站或梧桐时代网站所提供的服务，必须事先认真阅读本服务条款中各条款，包括免除梧桐时代责任的免责条款及对用户的权利限制。请您审阅并接受或不接受本服务条款（未成年人审阅时应得到法定监护人的陪同）。如您不同意本服务条款及/或随时对其的修改，您应不使用或主动取消梧桐时代公司提供的服务。您的使用行为将被视为您对本服务条款全部的完全接受，包括接受梧桐时代对服务条款随时所做的任何修改。</p>
+                            <p>1.2这些条款可由梧桐时代随时更新，且毋须另行通知。梧桐时代平台服务条款(以下简称"服务条款")一旦发生变更,梧桐时代将在网页上公布修改内容。修改后的服务一旦在网页上公布即有效代替原来的服务条款。您可随时登陆梧桐时代网站查阅最新版服务条款。</p>
+                            <p>1.3梧桐时代平台网站，向广大开发者提供服务。本服务条款适用于梧桐时代提供的各种服务，但当您使用梧桐时代某一特定服务时，如该服务另有单独的服务条款、指引或规则，您应遵守本服务条款及梧桐时代随时公布的与该服务相关的服务条款、指引或规则等。前述所有的指引和规则，均构成本服务条款的一部分。除非本服务条款另有其他明示规定，新推出的产品或服务、增加或强化目前本服务的任何新功能，均受到本服务条款之规范。</p>
+
+                            <h4>2、用户使用规则</h4>
+                            <p>2.1梧桐时代平台仅提供网络平台内容支持，用户（您）必须自行配备上网和使用电信增值业务所需的设备，自行负担个人上网或第三方（包括但不限于电信或移动通信提供商）收取的通信费、信息费等有关费用。如涉及其他电信增值服务的，我们建议您与您的电信增值服务提供商确认相关的费用问题。 2.2除您与梧桐时代另有约定外，您同意本服务条款所有内容，您不可对梧桐时代平台所提供服务的任何部分或服务代码，进行出售、或利用本服务进行调查、广告、或用于其他商业目的，其中，您不得将任何广告信函与信息、促销资料、垃圾邮件与信息、滥发邮件与信息、直销及传销邮件与信息以网络电话、短信、彩信、邮件、即时通信、文件分享或以其他方式传送。</p>
+                            <p>2.3开发者的产品中不得通过梧桐时代相关服务发送任何妨碍社会治安或非法、虚假、骚扰性、侮辱性、恐吓性、伤害性、破坏性、挑衅性、庸俗性、淫秽色情性等内容的信息，一旦发现将立即停止对其服务，同时，梧桐时代不承担相关法律责任。</p>
+                            <p>2.4保证自己在使用各服务时用户身份的真实性和正确性及完整性，如果资料发生变化，您应及时更改。在安全完成本服务的登记程序并收到一个密码及帐号后，您应维持密码及帐号的机密安全。您应对任何人利用您的密码及帐号所进行的活动负完全的责任，北京梧桐时代科技有限责任公司无法对非法或未经您授权使用您帐号及密码的行为作出甄别，因此北京梧桐时代科技有限责任公司不承担任何责任。在此，您同意并承诺做到∶</p>
+                            <p>2.4.1当您的密码或帐号遭到未获授权的使用，或者发生其他任何安全问题时，您会立即有效通知到北京梧桐时代科技有限责任公司。</p>
+                            <p>2.5用户同意接受北京梧桐时代科技有限责任公司通过手机短信、电子邮件、客户端软件、网页或其他合法方式向用户发送商品促销或其他相关商业信息。在使用电信增值服务的情况下，用户同意接受本公司及合作公司通过增值服务系统或其他方式向用户发送的相关服务信息或其他信息，其他信息包括但不限于通知信息、宣传信息、广告信息等。</p>
+                            <h4>2.6关于收费服务</h4>
+                            <p>2.6.1梧桐时代平台所提供的部分服务是以收费方式提供的。一旦您本人或团队（包括您的代理）通过个人帐户购买收费服务，您应按有关的收费标准、付款方式支付相关服务费及其他费用。资费说明标明在梧桐时代平台网站相应服务的相应页面上。在您所开发的应用通过梧桐时代审核人审核前，您无法使用本公司的相关服务支持，如有其它问题可发邮件咨询。</p>
+                            <p>2.6.2逾期付费：服务费之逾期交纳应按梧桐时代或合作公司关于迟延付费的相应的规定办理。</p>
+                            <p>2.7依本服务条款所取得的服务权利不可转让。</p>
+                            <p>2.8您需要严格遵守国家的有关法律、法规和行政规章制度。如开发者（您）违反国家法律法规或本服务条款，本公司和合作公司将有权停止向用户提供服务而不需承担任何责任，如导致梧桐时代或合作公司遭受任何损害或遭受任何来自第三方的纠纷、诉讼、索赔要求等，开发者（您）须向本公司或合作公司赔偿相应的损失，开发者（您）并需对其违反服务条款所产生的一切后果负全部法律责任。</p>
+
+                            <h4>3、服务风险及免责声明</h4>
+                            <p>3.1用户须明白，本服务仅依其当前所呈现的状况提供，本服务涉及到互联网及相关通信等服务，可能会受到各个环节不稳定因素的影响。因此服务存在因上述不可抗力、计算机病毒或黑客攻击、系统不稳定、用户所在位置、用户关机、通信网络、互联网络原因等造成的服务中断或不能满足用户要求的风险。开通服务的开发者须承担以上风险，本公司和合作公司对服务之及时性、安全性、准确性不作担保，对因此导致用户不能发送和接受阅读消息、或传递错误，个人设定之时效、未予储存或其他问题不承担任何责任。</p>
+                            <p>3.2如本公司的系统发生故障影响到本服务的正常运行，本公司承诺在第一时间内与相关单位配合，及时处理进行修复。但用户因此而产生的经济损失，本公司和合作公司不承担责任。此外，梧桐时代保留不经事先通知为维修保养、升级或其他目的暂停本服务任何部分的权利。</p>
+                            <p>3.3梧桐时代在此郑重提请您注意，任何经由本服务上载、发送即时信息、电子邮件或任何其他方式传送的资讯、资料、文字、软件、音乐、音讯、照片、图形、视讯、信息、用户的登记资料或其他资料（以下简称"内容"），均由内容提供者承担责任。梧桐时代无法控制经由本服务传送之内容，也无法对用户的使用行为进行全面控制，因此不保证内容的合法性、正确性、完整性、真实性或品质；您已预知使用本服务时，可能会接触到令人不快、不适当或令人厌恶之内容，并同意将自行加以判断并承担所有风险，而不依赖于梧桐时代。但在任何情况下，梧桐时代有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停用户 使用本服务的全部或部分，保存有关记录，并向有关机关报告。但梧桐时代有权(但无义务)依其自行之考量，拒绝和删除可经由本服务提供之违反本条款的或其他引起梧桐时代或其他用户反感的任何内容。</p>
+                            <p>3.4关于使用及储存之一般措施：您承认关于本服务的使用梧桐时代有权制订一般措施及限制，包含但不限于本服务将保留用户个人信息、电子邮件信息、通信资料信息、所上载内容之最长期间、本服务一个帐号当中可收发电子邮件或手机短信等的最大数量、本服务一个账号当中可收发的单个信息或电子邮件的大小、梧桐时代平台服务器为您分配的最大使用空间，以及一定期间内您使用本服务之次数上限（及每次使用时间之上限）。通过本服务存储或传送任何信息、通信资料和其他内容，如被删除或未予储存，您同意梧桐时代平台毋须承担任何责任。您也同意，长时间未使用的帐号，梧桐时代有权关闭并收回帐号。您也同意，梧桐时代有权依其自行之考量，不论通知与否，随时变更这些一般措施及限制。</p>
+                            <p> 3.5链接服务：本服务或第三方可提供与其他国际互联网上之网站或资源之链接。由于梧桐时代平台无法控制这些网站及资源，您了解并同意：无论此类网站或资源是否可供利用，梧桐时代不予负责；梧桐时代也对存在或源于此类网站或资源之任何内容、广告、产品或其他资料不予保证或负责。因您使用或依赖任何此类网站或资源发布的或经由此类网站或资源获得的任何内容、商品或服务所产生的任何损害或损失，梧桐时代不负任何直接或间接之责任。若您认为该链接所载的内容侵犯您的权利，梧桐时代声明与上述内容无关，不承担任何责任。梧桐时代建议您与该网站或法律部门联系，寻求法律保护。</p>
+                            <p>3.6通过本平台的服务，您发布的信息可能夹带有额外广告信息（以下简称"信息"）。我们出于便利向平台用户提供这些信息，但我们并不控制第三方服务，也不对其负责。如果您或者接受方因此与对应第三方进行交易，由消费者承担责任，梧桐时代不承担任何责任。若因第三方服务而造成您的困扰和损失的，您需要直接与对应的第三方服务商直接协商解决，梧桐时代不承担任何责任。</p>
+                            <p>3.7我们原则上保证平台线路质量稳定可靠，但因以下情况造成的质量问题乙方不承担违约责任，如： 国家政策影响、运营商机房中继线路调整、电信运营商机房维护检修、电信运营商网络互联互通链接不通畅、电信运营商政策调整与影响、乙方租用第三方云主机线路影响以及不可抗力因素造成的服务质量问题等。并且要求您不得利用乙方平台播放、散布下列内容：</p>
+                            <p> 3.7.1反对宪法所确定的基本原则的；</p>
+                            <p>3.7.2危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+                            <p> 3.7.3有损国家荣誉和利益的；</p>
+                            <p> 3.7.4煽动民族仇恨、民族歧视、破坏民族团结的；</p>
+                            <p>3.7.5破坏国家宗教政策，宣扬法轮功等邪教和封建迷信的；</p>
+                            <p>3.7.6散布谣言，扰乱社会秩序的，破坏社会稳定的；</p>
+                            <p>3.7.7散布淫秽、色情、赌博、暴力、凶杀、恐怖、诈骗或者教唆犯罪的；</p>
+                            <p>3.7.8侮辱或者诽谤他人，侵犯他人合法权益的；</p>
+                            <p>3.7.9有法律、行政法规禁止的其他内容的。</p>
+                            <p>3.7.10有其他违反运营商规定的行为的；</p>
+                            <p>3.7.11有对最终用户造成骚扰行为的；</p>
+
+                            <h4>4、服务变更、中断或终止及服务条款的修改</h4>
+                            <p>4.1本服务的所有权和运作权、一切解释权归北京梧桐时代科技有限责任公司。梧桐时代提供的服务将按照其发布的章程、服务条款和操作规则严格执行。</p>
+                            <p>4.2本公司有权在必要时修改服务条款，服务条款一旦发生变动，将会在相关页面上公布修改后的服务条款。如果不同意所改动的内容，用户应主动取消此项服务或与我们取得联系。如果用户继续使用服务，则视为接受服务条款的变动。</p>
+                            <p>4.3本公司和合作公司有权按需要修改或变更所提供的收费服务、收费标准、收费方式、服务费、及服务条款。如果出现任何产品价格变动，梧桐时代和合作公司将尽最大努力通过有效方式通知用户有关的修改或变更。</p>
+                            <p>4.4本公司特别提醒用户注意，本公司为了保障公司业务发展和调整的自主权，本公司拥有经或未经事先通知而修改服务内容、中断或中止部分或全部服务的权利，修改会以通告形式公布于梧桐时代网站相关页面上，一经公布视为通知。梧桐时代行使修改或中断服务的权利而造成损失的，梧桐时代不需对用户或任何第三方负责。</p>
+                            <p>4.5如发生下列任何一种情形，本公司有权随时中断或终止向用户提供服务而无需通知用户：</p>
+                            <p>4.5.1用户提供的个人资料不真实；</p>
+                            <p>4.5.2用户违反本服务条款的规定；</p>
+                            <p>4.5.3按照主管部门的要求；</p>
+                            <p>4.5.4其他本公司认为是符合整体服务需求的特殊情形。</p>
+
+                            <h4>5、用户隐私保护条款</h4>
+                            <p>5.1梧桐时代重视对用户隐私的保护，保护隐私是梧桐时代的一项基本政策。您提供的登记资料及梧桐时代公司保留的有关您的若干其他个人资料将受到中国有关隐私的法律和本公司《隐私保护声明》之规范。</p>
+                            <p>5.2您使用梧桐时代服务时，梧桐时代有权用数字代码、通用唯一标识符、cookies或其他技术确定进入服务的计算机。梧桐时代有可能利用所得信息对服务的使用进行总体性及匿名的数据统计及分析，所得数据可供梧桐时代或其合作人使用。计算机识别技术也会用于执行相关的服务条款。</p>
+                            <p>5.3梧桐时代可能会与第三方合作向用户提供相关的服务，如该第三方为合法经营的公司且提供同等的用户隐私保护（如电信运营商），梧桐时代有权将用户的注册资料等提供给该第三方。</p>
+
+                            <h4>6、商标使用说明</h4>
+                            <p>6.1梧桐时代平台、梧桐时代、号码logo等，以及其他梧桐时代标志及产品、服务名称，均为梧桐时代公司之商标（以下简称"梧桐时代标识"）。未经梧桐时代 事先书面同意，您不得将梧桐时代标记以任何方式展示或使用或作其他处理，也不得向他人表明您有权展示、使用、或其他有权处理梧桐时代标识的行为。</p>
+                            <p>7、知识产权及法律保护条款</p>
+                            <p>7.1本公司定义的信息内容包括：文字、软件、声音、相片、录像、图表；网页；广告中全部内容；本公司为用户提供的商业信息。所有这些内容受版权、商标权、和其它知识产权和所有权法律的保护。所以，用户只能在本公司和相关权利人授权下才能使用这些内容，而不能擅自使用、抄袭、复制、修改、编撰这些内容、或创造与内容有关的衍生产品。</p>
+                            <p>7.2关于梧桐时代提供的软件和服务：您了解并同意，本服务及本服务所使用或提供之相关软件（以下简称"软件"）（但不包括两用户之间直接传递的资料）是由梧桐时代公司拥有所有相关知识产权及其他法律保护之专有之知识产权（包括但不限于版权、商标权、专利权、及商业秘密）资料。若就某一具体服务存在单独的最终用户软件授权协议，您除应遵守本协议有关规定外，亦应遵守该软件授权协议。　除非您亦同意该软件授权协议，否则您不得安装或使用该软件。对于未提供单独的软件授权协议的软件，　除您应遵守本服务协议外，梧桐时代公司或所有权人仅将为您个人提供可取消、不可转让、非专属的软件授权许可，　并仅为访问或使用本服务之目的而使用该软件。此外，在任何情况下，未经梧桐时代明示授权，您均不得修改、出租、出借、出售、散布本软件之任何部份或全部，或据以制作衍生著作，或使用擅自修改后的软件，或进行还原工程、反向编译，或以其他方式发现原始编码，包括但不限於为了未经授权而使用本服务之目的。您同意将通过由梧桐时代所提供的界面而非任何其他途径使用本服务。</p>
+
+                            <h4>8、本服务条款与国家法律、法规一致</h4>
+                            <p>8.1本服务条款要与国家相关法律、法规一致，如发生服务条款与相关法律、法规条款有相抵触的内容，抵触部分以法律、法规条款为准。</p>
+
+                            <h4>9、用户权益条款</h4>
+                            <p>9.1用户维护本公司利益，负责支付由用户使用超出服务范围引起的一切费用（包括但不限于：律师费用、违反服务条款的损害补偿费用以及其它第三人使用用户的电脑、帐号和其它知识产权的追索费）。 9.2用户须对违反国家法律规定及本服务条款所产生的一切后果承担法律责任。</p>
+
+                            <h4>10、服务条款适用范围</h4>
+                            <p>10.1本公司的住所地为北京市大兴，如果用户与本公司发生争议，用户同意将争议提交至本公司所在地的人民法院通过诉讼的方式解决。</p>
+                            <p>10.2如本服务条款中的任何条款无论因何种原因完全或部分无效或不具有执行 力，本服务条款的其余条款仍应有效且具有约束力，并且努力使该规定反映之意向具备效力。</p>
+                            <p>10.3本服务条款构成您与梧桐时代之全部协议，规范您对本服务之使用，并取代您先前与梧桐时代达成的全部协议。但在您使用相关服务、或使用第三方提供的内容或软件时，亦应遵从所适用之附加条款及权利。</p>　
+                            <p>10.4每项服务的内容、收费标准、收费方式、服务费及服务条款应以最后发布的通知为准。</p>
+                            <p>10.5用户对服务之任何部分或本服务条款的任何部分之意见及建议可通过邮件与梧桐时代联系，公司邮箱：kf@wutongsd.com 梧桐时代公司保留本服务条款之解释权。</p>
+
+                            <h4>北京梧桐时代科技有限责任公司</h4>
+                        </div>
+                    </div>
+                    <div class="theme-popover-mask"></div>
+                </div>
+            </div>
+<!--
+             <span class="f">
+                <p class="y">
+                    <input name="idr" id="idr" type="checkbox">
+                    <p for="idr">我已阅读并同意协议</p>
+                </p>
+                <p class="wei">
+                    <div class="theme-buy">
+                        <a class="btn btn-primary btn-large theme-login" href="javascript:;">《梧桐时代用户注册协议》</a>
+                    </div>
+                    <div class="theme-popover">
+                     <div class="theme-poptit">
+                         <a href="javascript:;" title="关闭" class="close">×</a>
+                         <h3>登录 是一种态度</h3>
+                     </div>
+        &lt;!&ndash;
+    <div class="theme-popbod dform">
+        <form class="theme-signin" name="loginform" action="" method="post">
+            <ol>
+                <li><h4>你必须先登录！</h4></li>
+                <li><strong>用户名：</strong><input class="ipt" type="text" name="log" value="lanrenzhijia" size="20" /></li>
+                <li><strong>密码：</strong><input class="ipt" type="password" name="pwd" value="***" size="20" /></li>
+                <li><input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
+            </ol>
+        </form>
+    </div>&ndash;&gt;
+                    </div>
+                    <div class="theme-popover-mask"></div>
+                </p>
+            </span>-->
+
+            <button id="but"  onclick="validateCode()" >提交</button>
+        </div>
+        <!--                                               -->
+     <!--   <div class="qy" id="qy">
+            <p>提交个人注册信息</p>
+            <div class="yongH">
+                <label for="yonghu">&nbsp;&nbsp;用户名</label>
+                <input type="text" class=""/> <input type="text" class="reght" name="" id="yonghu" value="" placeholder="6-18位英文字母或数字" />
+            </div>
+            <div class="miM">
+                <label for="mimad">密码</label>
+                <input type="text" class=""/> <input type="text"  class="reght" name="" id="mimad" value="" placeholder="6-18个字符，可使用字母 ,数字,下划线" />
+            </div>
+            <div class="queR">
+                <label for="querenm">确认密码</label>
+                <input type="text" class=""/> <input type="text"  class="reght" name="" id="querenm" value="" placeholder="您可以通过手机号,邮箱取回口令" />
+            </div>
+            <div class="dinZ">
+                <label for="queren" id="email">注册邮箱</label>
+                <input type="text" class="" value=""/>
+            </div>
+            <div class="dinZ">
+                <label for="queren">企业全程</label>
+                <input type="text" class=""/>
+            </div>
+            <div class="dinZ">
+                <label for="queren">企业性质</label>
+                <input type="text" class=""/>
+            </div> <div class="dinZ">
+                <label for="queren">主营项目</label>
+                <input type="text" class=""/>
+            </div>
+            <div class="suoZ">
+                <label for="suozaid">所在地区</label>
+                <input type="text" /> <input type="text"  class="reght" name="" id="suozaid" />
+            </div>
+            <div class="yanZheng">
+                <label for="queren">验证码</label>
+                <input type="text" class=""/><img src="img/imglunb/9.jpg" alt=""/><a>看不清楚  换一张</a>
+            </div>
+            <div class="shouJ">
+                <label for="queren">手机号</label>
+                <input type="text" class=""/>
+            </div>
+            <div class="duanX">
+                <label for="yanZm">短信验证码</label>
+                <input type="text" id="yanZm"/>  <button type="submit" class="dengLu" >获取验证码</button>
+            </div>
+            <span class="f">
+                <p class="y">
+                    <input name="idr1" id="idr1" type="checkbox" onClick="auto_ck(this);">
+                    <p for="idr1">我已阅读并同意协议</p>
+                </p>
+                <p class="wei">《梧桐时代用户注册协议》</p>
+            </span>
+            <button>提交</button>
+        </div>-->
+    </div>
+</div>
+</body>
+<script src="JS/jquery-1.11.3.js" type="application/javascript"></script>
+<!--<script src="//cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>-->
+<script type="text/javascript">
+    window.onload=function(){
+        createCode();
+    };
+
+    var code;
+    function createCode()
+    {
+        code = "";
+        var codeLength = 6; //验证码的长度
+        var checkCode = document.getElementById("checkCode");
+        var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //所有候选组成验证码的字符，当然也可以用中文的
+        for(var i = 0; i < codeLength; i++)
+        {
+            var charNum = Math.floor(Math.random() * 52);
+            code += codeChars[charNum];
+        }
+        if(checkCode)
+        {
+            checkCode.className = "code";
+            checkCode.innerHTML = code;
+        }
+    }
+
+
+    /*              校       验              */
+
+
+    function validateCode()
+    {
+        var re = /^([\u4e00-\u9fa5]+|[a-zA-Z0-9]+)$/; //不能出现特殊字符
+
+        if($("#yongh").val()=="" || $("#yongh").val()=="undefined"){
+            $("#yongh").css("borderColor","red");
+            alert("用户名称不能为空");
+            return false;
+
+        }else if(!re.test($("#yongh").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#yongh").css("borderColor","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#yongh").val()){
+            $("#yongh").css("borderColor","");
+        }
+
+
+        if($("#mima").val()=="" || $("#mima").val()=="undefined"){
+            $("#mima").css("borderColor","red");
+            alert("请填写密码");
+            return false;
+
+        }else if(!re.test($("#mima").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#mima").css("borderColor","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#mima").val()){
+            $("#mima").css("borderColor","");
+        }
+
+
+
+        if($("#queren").val()=="" || $("#queren").val()=="undefined"){
+            $("#queren").css("borderColor","red");
+            alert("确认密码");
+            return false;
+
+        }else if(!re.test($("#queren").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#queren").css("borderColor","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#queren").val()!==$("#mima").val()){
+            $("#queren").css("borderColor","red");
+            alert("确认密码不匹配,请重新输入!");
+            return false;
+        }else if($("#queren").val()){
+            $("#queren").css("borderColor","");
+        }
+
+
+        var yX=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+
+        if($("#dian_z").val()=="" || $("#dian_z").val()=="undefined"){
+            $("#dian_z").css("borderColor","red");
+            alert("电子邮箱不能为空");
+            return false;
+        }else if(!yX.test($("#dian_z").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#dian_z").css("borderColor","red");
+            alert('邮箱不正确');
+            return false;
+        }else if($("#dian_z").val()){
+            $("#dian_z").css("borderColor","");
+        }
+
+/*        地理位置验证                                                            */
+
+        if($("#selProvince").val()=="" || $("#selProvince").val()=="undefined"){
+            $("#selProvince").css("borderColor","red");
+            alert("请选择省份");
+            return false;
+        }else if($("#selProvince").val()!==""){
+            $("#selProvince").css("borderColor","");
+        }
+
+        if($("#selCity").val()=="" || $("#selCity").val()=="undefined"){
+            $("#selCity").css("borderColor","red");
+            alert("请选择市");
+            return false;
+        }else if($("#selCity").val()!==""){
+            $("#selCity").css("borderColor","");
+        }
+
+        if($("#selDist").val()=="" || $("#selDist").val()=="undefined"){
+            $("#selDist").css("borderColor","red");
+            alert("请选择县");
+            return false;
+        }else if($("#selDist").val()!==""){
+            $("#selDist").css("borderColor","");
+        }
+
+        /*                   验证码    校验               */
+
+        var inputCode=document.getElementById("inputCode").value;
+        if(inputCode.length <= 0)
+        {
+            $("#inputCode").css("borderColor","red");
+            alert("请输入验证码！");   return false;
+        }
+        else if(inputCode.toUpperCase() != code.toUpperCase())
+        {
+            $("#inputCode").css("borderColor","red");
+            alert("验证码输入有误！");
+            createCode();
+            return false;
+        }else if(inputCode.toUpperCase() == code.toUpperCase()){
+            $("#inputCode").css("borderColor","");
+        }
+
+/*                     手机号验证                     */
+        var de=/^1[34578]\d{9}$/;
+
+        if($("#shou_j").val()=="" || $("#shou_j").val()=="undefined"){
+            $("#shou_j").css("borderColor","red");
+            alert("请填写手机号");
+            return false;
+        }else if(!de.test($("#shou_j").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#shou_j").css("borderColor","red");
+            alert('手机号无效');
+            return false;
+        }else if($("#shou_j").val()){
+            $("#shou_j").css("borderColor","");
+        }
+
+     /*            协议单选框必选校验                             */
+        if(!$('#idr').is(":checked")){
+            alert("请认真阅读协议并选中");
+        }else if($('#idr').is(":checked")){
+
+        }
+
+    }
+
+</script>
+<!--<script src="JS/zhuC.js"></script>-->
+<script type="text/javascript">
+    var temp;
+    var P = new Array();
+    var C = new Array();
+    var D = new Array();
+    P = new Array("北京","上海","天津","重庆","广东","四川","浙江","贵州","辽宁","江苏","福建","河北","河南"," 吉林","黑龙江","山东","安徽","广西","海南","内蒙古","山西","宁夏","甘肃","陕西","青海","湖北","湖南"," 江西","云南","新疆","香港","澳门");
+    /*北京    */ C[0] = new Array("北京");
+    /*上海    */ C[1] = new Array("上海");
+    /*天津    */ C[2] = new Array("天津");
+    /*重庆    */ C[3] = new Array("重庆");
+    /*广东    */ C[4] = new Array("广州","深圳","珠海","佛山","惠州","东莞","中山","江门","湛江","汕头");
+    /*四川    */ C[5] = new Array("成都","自贡市","攀枝花","泸州");
+    /*浙江    */ C[6] = new Array("杭州","宁波","嘉兴","绍兴","温州","金华","衢州","舟山","台州","丽水","湖州");
+    /*贵州    */ C[7] = new Array("贵阳");
+    /*辽宁    */ C[8] = new Array("沈阳","大连");
+    /*江苏    */ C[9] = new Array("南京","苏州","南通","无锡","盐城","徐州","常州","连云港","常熟","扬州","镇江","泰州","昆山","吴江");
+    /*福建    */C[10] = new Array("福州","厦门","泉州");
+    /*河北    */C[11] = new Array("石家庄","唐山","邯郸","保定","廊坊","衡水","秦皇岛");
+    /*河南    */C[12] = new Array("郑州","洛阳");
+    /*吉林    */C[13] = new Array("长春","吉林");
+    /*黑龙江  */C[14] = new Array("哈尔滨");
+    /*山东    */C[15] = new Array("济南","青岛","威海","烟台","潍坊","日照","临沂","淄博");
+    /*安徽    */C[16] = new Array("合肥","芜湖","马鞍山");
+    /*广西    */C[17] = new Array("南宁","桂林","北海","柳州");
+    /*海南    */C[18] = new Array("海南","三亚");
+    /*内蒙古  */C[19] = new Array("呼和浩特","包头");
+    /*山西    */C[20] = new Array("太原");
+    /*宁夏    */C[21] = new Array("银川");
+    /*甘肃    */C[22] = new Array("兰州");
+    /*陕西    */C[23] = new Array("西安");
+    /*青海    */C[24] = new Array("西宁");
+    /*湖北    */C[25] = new Array("武汉","宜昌");
+    /*湖南    */C[26] = new Array("长沙","株洲","湘潭");
+    /*江西    */C[27] = new Array("南昌","赣州");
+    /*云南    */C[28] = new Array("昆明");
+    /*新疆    */C[29] = new Array("乌鲁木齐");
+    /*香港    */C[30] = new Array("香港");
+    /*澳门    */C[31] = new Array("澳门");
+    /*台湾    */C[31] = new Array("台北");
+    for(temp in C)
+    {
+        D[temp] = new Array();
+    }
+    /*北京    */D[0][0] = new Array("海淀区,朝阳区,东城区,西城区,崇文区,宣武区,丰台区,石景山,房山区,门头沟,通州区,顺义区,昌平区,密云区,怀柔区,延庆区,平谷区,大兴区,燕郊区");
+    /*上海    */D[1][0] = new Array("黄浦区,卢湾区,徐汇区,徐家汇,长宁区,静安区,普陀区,闸北区,虹口区,杨浦区,宝山区,闵行区,嘉定区,浦东新区,松江区,金山区,青浦区,南汇区,奉贤区,崇明县");
+    /*天津    */D[2][0] = new Array("和平,西青,北辰,大港,南开,河东,河西,河北,津南,红桥,塘沽,汉沽,东丽,宝坻,蓟县,武清,宁河,静海,开发区");
+    /*重庆    */D[3][0] = new Array("南岸,渝北,万盛,大渡口,万州,北碚,沙坪坝,巴南,双桥,涪陵,江北,九龙坡,渝中");
+    /*广州    */D[4][0] = new Array("荔湾,越秀,东山,天河,海珠,黄埔,芳村,白云,花都,番禺,东莞,广州经济技术开发区,从化,增城,萝岗,清远,南沙,佛山");
+    /*深圳    */D[4][1] = new Array("福田,罗湖,南山,盐田,宝安,龙岗");
+    /*珠海    */D[4][2] = new Array("斗门,横琴,金湾,香洲,坦洲");
+    /*佛山    */D[4][3] = new Array("南海,顺德,三水,高明,禅城");
+    /*惠州    */D[4][4] = new Array("博罗县,大亚湾区,惠城区,惠东县,惠阳区,龙门县,仲恺区");
+    /*东莞    */D[4][5] = new Array("茶山,长安,常平,大朗,大岭山,道?,东城,东坑,凤岗,高?,莞城,洪梅,厚街,黄江,虎门,寮步,麻涌,南城,企石,桥头,清溪,沙 田,石碣,石龙,石排,松山湖,塘厦,万江,望牛墩,谢岗,樟木头,中堂");
+    /*中山    */D[4][6] = new Array("东区,南区,西区,石岐区,南头镇,古镇镇,东凤镇,小榄镇,黄圃镇,三角镇,民众镇,阜沙镇,火炬区,港口镇,东升镇,横栏镇,沙溪镇,大涌镇,板芙镇,五桂山镇,南朗镇,三乡镇,神湾镇,坦洲镇");
+    /*江门    */D[4][7] = new Array("新会区,蓬江区,江海区,台山市,恩平市,鹤山市,开平市");
+    /*成都    */D[5][0] = new Array("青羊,锦江,金牛,武侯,成华,龙泉驿,青白江,高新区,金堂县,新都区,温江区,郫县,双流县,新津县,大邑县,都江堰市,崇州市,邛崃市,蒲江县,彭州市,高新西区,高新西区");
+    /*杭州    */D[6][0] = new Array("上城,下城,西湖,拱墅,江干,滨江,余杭,萧山,富阳,桐庐,临安,淳安,建德");
+    /*宁波    */D[6][1] = new Array("海曙,江东,江北,鄞州,镇海,北仑,慈溪,余姚,奉化,宁海,象山,高新区,东钱湖旅游度假区");
+    /*嘉兴    */D[6][2] = new Array("嘉善,平湖,海盐,海宁,桐乡,秀洲,南湖,市区,经济开发区");
+    /*绍兴    */D[6][3] = new Array("绍兴县,诸暨市,上虞市,新昌县,越城区,嵊州市");
+    /*贵阳    */D[7][0] = new Array("云岩,南明,金阳新区,小河,花溪,乌当,白云,清镇,开阳,修文,息烽,小河片,金阳");
+    /*沈阳    */D[8][0] = new Array("和平,沈河,皇姑,大东,铁西,苏家屯,东陵,新城子,于洪,新民,辽中,康平,法库,浑南新区,沈北新区");
+    /*大连    */D[8][1] = new Array("西岗,中山,沙河口,甘井子,旅顺口,金州,开发区,高新园区,长兴岛,普兰店,瓦房店,庄河");
+    /*南京    */D[9][0] = new Array("白下,秦淮,玄武,鼓楼,下关,建邺,江宁,六合,浦口,栖霞,雨花,大厂,溧水,高淳");
+    /*苏州    */D[9][1] = new Array("园区,新区,平江,沧浪,金阊,虎丘,吴中,昆山,常熟,太仓,张家港,相城,吴江");
+    /*南通    */D[9][2] = new Array("城东区,城南区,城北区,城中区,狼山区,天生港,唐闸区,观音山区,开发区,海安县,如皋市,如东县,通州,海门,启东市,海门市,港闸,崇川");
+    /*无锡    */D[9][3] = new Array("崇安区,南长区,北塘区,新区,滨湖区,惠山区,马山区,锡山区,江阴市,宜兴市");
+    /*盐城    */D[9][4] = new Array("盐城,东台,大丰,盐都,建湖,响水,阜宁,射阳,滨海");
+    /*徐州    */D[9][5] = new Array("丰县,鼓楼,贾汪,金山桥开发区,沛县,邳州市,泉山,睢宁市,新城区,云龙,铜山区");
+    /*常州    */D[9][6] = new Array("金坛,溧阳,戚区,天宁,武进,新北,钟楼");
+    /*连云港  */D[9][7] = new Array("新浦,海州,连云三区,国家级经济技术开发区,赣榆,灌云,东海,灌南");
+    /*常熟    */D[9][8] = new Array("虞山镇,梅李镇,海虞镇,新港镇,古里镇,沙家浜镇,支塘镇,董浜镇,练塘镇,尚湖镇,辛庄镇");
+    /*扬州    */D[9][9] = new Array("宝应市,广陵区,高邮市,邗江区,江都市,开发区,维扬区,仪征市");
+    /*镇江    */D[9][10] = new Array("丹阳市,句容市,扬中市,丹徒区,京口区,润州区,镇江新区");
+    /*泰州    */D[9][11] = new Array("城中区,城东区,城西区,城南区,城北区,高港区,泰兴市,姜堰市,兴化市,靖江市");
+    /*昆山    */D[9][12] = new Array("巴城镇,淀山湖镇,花桥镇,锦溪镇,陆家镇,千灯镇,玉山镇,张浦镇,周市镇,周庄镇");
+    /*福州    */D[10][0] = new Array("台江,鼓楼,仓山,晋安,马尾,闽侯县,长乐市");
+    /*厦门    */D[10][1] = new Array("开元,湖里,思明,鼓浪屿,集美,杏林,海沧,同安,翔安,漳州,龙岩,泉州");
+    /*泉州    */D[10][2] = new Array("丰泽区,安溪县,德化县,惠安县,晋江市,鲤城区,洛江区,南安市,泉港区,石狮市,永春县");
+    /*石家庄  */D[11][0] = new Array("桥东,桥西,新华,裕华,长安,开发区,正定,平山,鹿泉市,栾城,藁城");
+    /*唐山    */D[11][1] = new Array("曹妃甸工业区,丰南,丰润,高新区,古冶,海港开发区,汉沽管理区,开平,乐亭县,卢台开发区,路北,路南,滦南县,滦县,南堡开发区,迁安市,迁西县,唐海县,玉田县,遵化市");
+    /*邯郸    */D[11][2] = new Array("武安市,邯郸县,临漳县成安县,大名县,涉县,磁县,肥乡县永年县,邱县,鸡泽县,广平县,馆陶县魏县,曲周县");
+    /*保定    */D[11][3] = new Array("定州市,涿州市,安国市,高碑店市,易县,徐水县,涞源县,定兴县,顺平县,唐县,望都县,涞水县,清苑县,满城县,高阳县,安新县,雄县,容城县,曲阳县,阜平县,博野县,蠡县,南市区,北市区,新市区,高新技术产业开发区,白沟·白洋淀温泉城开发区");
+    /*廊坊    */D[11][4] = new Array("安次,广阳,三河,霸州,香河,永清,固安,文安,大城,大厂");
+    /*衡水    */D[11][5] = new Array("桃城区,深州市,冀州市,安平县,故城县,阜城县,景县,枣强县,武强县,饶阳县,开发区,武邑县,郊区");
+    /*秦皇岛  */D[11][6] = new Array("北戴河,昌黎县,抚宁县,海港,卢龙县,青龙县,山海关");
+    /*郑州    */D[12][0] = new Array("金水,中原,管城,二七,邙山,惠济,经济技术开发区,郑东新区");
+    /*洛阳    */D[12][1] = new Array("涧西区,西工区,老城区,?河区,洛龙区,吉利区,偃师市,栾川县,孟津县,咸阳县,伊川县,宜阳县");
+    /*长春    */D[13][0] = new Array("朝阳,宽城,二道,南关,绿园,双阳,其它,吉林地区,高新,经开,净月,汽开");
+    /*吉林    */D[13][1] = new Array("昌邑区,船营区,龙潭区,丰满区,永吉县,舒兰市,磐石市,蛟河市,桦甸市,经开区,高新区");
+    /*哈尔滨  */D[14][0] = new Array("道里,道外,南岗,动力,平房,香坊,太平,开发区,阿城,呼兰,松北");
+    /*济南    */D[15][0] = new Array("市中,天桥,历下,槐荫,历城,长清,高新,济阳,平阴,商河,章丘");
+    /*青岛    */D[15][1] = new Array("市南,市北,四方,李沧,崂山,城阳,黄岛,即墨市,胶州市,胶南市,平度市,莱西市,开发区");
+    /*威海    */D[15][2] = new Array("环翠区,文登市,荣成市,乳山市,高区,经区");
+    /*烟台    */D[15][3] = new Array("芝罘区,福山区,龙口市,莱阳市,莱州市,蓬莱市,招远市,莱山区,开发区,牟平区,栖霞市,海阳市,长岛县");
+    /*潍坊    */D[15][4] = new Array("奎文,潍城,寒亭,坊子,寿光市,高新技术开发区,经济开发区");
+    /*日照    */D[15][5] = new Array("东港,东港区,岚山区,莒县,五连县");
+    /*临沂    */D[15][6] = new Array("兰山区,河东区,罗庄区,郯城县,苍山县,平邑县,蒙阴县,沂南县,沂水县,费县,莒南县,临沭县");
+    /*合肥    */D[16][0] = new Array("中市,东市,西市,郊区,庐阳区,包河区,瑶海区,蜀山区,高新区,新站区,经开区,政务区,滨湖新区");
+    /*南宁    */D[17][0] = new Array("兴宁,青秀,西乡塘,江南,良庆,邕宁,桂林市,北海市,钦州市");
+    /*桂林    */D[17][1] = new Array("秀峰区,叠彩区,象山区,七星区,雁山区,西城区,八里街区");
+    /*北海    */D[17][2] = new Array("海城,银海,铁山港,合浦");
+    /*海南    */D[18][0] = new Array("海口市,三亚市,文昌市,琼海市,万宁市,儋州市,东方市,五指山市,保亭县,洋浦经济开发区,其他,定安县,澄迈县");
+    /*呼和浩特*/D[19][0] = new Array("回民,玉泉,新城,金川开发区,金桥开发区,金山开发区,如意开发区,赛罕,郊区,托克托,清水河,武川,和林格尔,土默特左旗");
+    /*太原    */D[20][0] = new Array("杏花岭,小店,迎泽,尖草坪,万柏林,晋源,榆次");
+    /*银川    */D[21][0] = new Array("城区,新城,兴庆区,金凤区,西夏区,永定县,贺兰县,灵武市");
+    /*兰州    */D[22][0] = new Array("城关,七里河,西固,安宁,红古,永登,榆中,皋兰");
+    /*西安    */D[23][0] = new Array("城北,城南,城东,城内,城西,高新,长安,临潼,蓝田,阎良,灞桥,咸阳");
+    /*西宁    */D[24][0] = new Array("城中,城东,城西,城北,湟源,湟中,大通回族土族自治县");
+    /*武汉    */D[25][0] = new Array("江汉,江岸,?口,汉阳,武昌,洪山,青山,东西湖,黄陂,江夏,阳逻,新洲,蔡甸,汉南,沌口");
+    /*宜昌    */D[25][1] = new Array("夷陵区,西陵区,伍家岗区,点军区,?亭区,宜都市,当阳市,枝江市,东山开发区,远安县,兴山县,秭归县,长阳土家族自治县,五峰土家族自治县");
+    /*长沙    */D[26][0] = new Array("岳麓,天心,雨花,开福,芙蓉,星沙,长沙经济开发区");
+    /*南昌    */D[27][0] = new Array("东湖,西湖,青云谱,湾里,昌北,高新开发区,红谷滩,南昌县,青山湖,新建县,郊区,进贤,安义");
+    /*昆明    */D[28][0] = new Array("盘龙区,五华区,官渡区,西山区,安宁,呈贡,其他,东川");
+    /*乌鲁木齐*/D[29][0] = new Array("天山,沙伊巴克,新市,水磨沟,头屯河,南泉,东山");
+    /*香港    */D[30][0] = new Array("北区,大埔去,东区,观塘区,黄大仙区,九龙城区,葵青区,离岛区,南区,沙田区,屯门区,湾仔区,西贡区,油尖旺区,元朗区,中西区,荃湾区");
+    /*台北    */D[31][0] = new Array();
+    ///城市与省份的序列对应、每个城市与每个区域数组对应
+    //创建城市对象，返回一个该城市所在省份及所拥有区域的对象
+    function createCity(sCityName)
+    {
+        var oCity = new Object();
+        oCity.province = "";
+        oCity.city = sCityName;
+        oCity.dist = new Array();
+        oCity.pindex = -1;//所属省份在省份数组中的位置index
+        oCity.cindex = -1;//城市在所属城市数组中的位置index（二者用来确定区域数组）
+
+        var m = -1;var n = -1;
+        for(var i = 0; i < C.length; i++)
+        {
+            for(var j=0; j < C[i].length; j++)
+            {
+                if(C[i][j] == sCityName)
+                {
+                    oCity.province = P[i];
+                    oCity.dist = D[i][j];
+                    oCity.pindex = i;
+                    oCity.cindex = j;
+                    break;
+                }
+            }
+
+            if(oCity.province != "")
+            {
+                break;
+            }
+        }
+
+        return oCity;
+    }
+    /*三级、省、市、区域*/
+    /*面向对象*/
+    function oMenu(selProvince,selCity,selDist)
+    {
+        ///selProvince省份的select控件id
+        ///selCity城市的select控件id
+        ///selDist区域的select控件id
+        this.oProvince = document.getElementById(selProvince);
+
+        ///城市变化，初始化区域
+        function fnInitDist(city)
+        {
+            var objCity = createCity(city);
+            var dist = objCity.dist.toString().split(',');
+            ClearSelect(selDist,"请选择区域");
+            InitSelect(selDist,dist,"");
+        };
+
+        ///初始化城市
+        function fnInitCity(province)
+        {
+            for(var i = 0;i < P.length;i++)
+            {
+                if(P[i] == province)
+                {
+                    ClearSelect(selCity,"请选择城市");
+                    InitSelect(selCity,C[i],"");
+                    ClearSelect(selDist,"请先选择城市");
+                    document.getElementById(selCity).onchange = function (){fnInitDist(this.value);};
+                    break;
+                }
+            }
+        };
+
+        ///初始化省份
+        this.fnInitProvince = function(){
+            InitSelect(selProvince,P,"请选择省份");
+            ClearSelect(selCity,"请先选择省份");
+            ClearSelect(selDist,"请先选择城市");
+            this.oProvince.onchange = function (){fnInitCity(this.value);};
+        };
+
+///初始化select控件
+        function InitSelect(obj,aInitValue,sMenu)
+        {
+            ///obj:要初始化的select控件对象的id
+            ///aInitValue:要初始化的数组值
+            ///sMenu:在select控件头部要添加的option，value为空；如果该参数为空，则只初始化aInitValue而不加头部
+            if(sMenu != "")
+            {
+                document.getElementById(obj).options.add(new Option(sMenu,""));
+            }
+
+            for(var i = 0; i < aInitValue.length; i++)
+            {
+                document.getElementById(obj).options.add(new Option(aInitValue[i],aInitValue[i]));
+            }
+        }
+
+        function ClearSelect(obj,sMenu)
+        {
+            document.getElementById(obj).options.length = 0;
+            document.getElementById(obj).options.add(new Option(sMenu,""));
+        }
+
+    }
+
+    var oMenu = new oMenu("selProvince","selCity","selDist");//select ID
+    oMenu.fnInitProvince();
+
+
+
+
+/*         弹窗                    */
+
+
+    jQuery(document).ready(function($) {
+        $('.theme-login').click(function(){
+            $('.theme-popover-mask').fadeIn(100);
+            $('.theme-popover').slideDown(200);
+        })
+        $('.theme-poptit .close').click(function(){
+            $('.theme-popover-mask').fadeOut(100);
+            $('.theme-popover').slideUp(200);
+        })
+
+    })
+
+
+
+</script>
+
+</html>
+
+

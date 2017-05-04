@@ -1,0 +1,942 @@
+@charset "utf-8";
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#ff0000;}
+
+img,input{
+    outline: none;border: none;vertical-align: middle;
+}
+/*body,html{
+    height: 100%;
+    width: 100%;
+}*/
+.fanHui{
+    position: fixed;
+    bottom:150px;
+    right:50px;
+    width: 89px;
+    height:89px;
+    border-radius: 89px;
+    box-shadow: 4px 4px 10px #000;
+    background:url("../img/fanhui0.png") no-repeat;
+    font-weight: bold;
+    display: none;
+    z-index:999;
+}
+.fanHui:hover{
+    background:url("../img/fanhui1.png") no-repeat;
+}
+
+.clear{clear:both; height: 0; line-height: 0; font-size: 0}
+
+.banxin1260{
+    /*background-color: #cecece;*/
+    background: url("../img/xuqiudating/背景.png") no-repeat;
+    height: 100%;
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.banx{
+    width: 1200px;
+    height: 100%;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+.nav{
+    /*float: left;*/
+    width: 1260px;
+    height: 40px;
+    background-color: #eaeaea;
+    margin: 0 auto;
+}
+.nav>ul{
+    float: right;
+    height: 14px;
+
+}
+.nav>ul>li,.nav>span{
+    float: left;
+    padding-right:35px;
+    margin-top: 8px;
+
+}
+
+.nav>ul>li{
+    padding-left: 35px;
+}
+.nav>ul>li:nth-child(2),.nav>ul>li:nth-child(3),.nav>ul>li:nth-child(4),.nav>ul>li:nth-child(5),.nav>ul>li:nth-child(6){
+    border-left: 1px solid #666666;
+}
+
+.nav>span{
+    color:#666666;
+    padding-left: 20px;
+}
+/*               logo                                                                                和搜索                    */
+.search{
+    height:95px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+.logo{
+    display: block;
+    float: left;
+    width:208px;
+    height: 62px;
+    background: url("../img/xuqiufabu/xuqiulogo.png") no-repeat;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.search>p{
+    float: left;
+    width: 284px;
+    height: 46px;
+    margin-top: 14px;
+    margin-left: 56px;
+    background: url(../img/xuqiufabu/zaoyang.png) no-repeat;
+}
+
+button{
+    width: 40px;
+    height: 42px;
+    border: none;
+    background: #459dff;
+    float: left;
+    margin-top: 20px;
+}
+input[type=text]{  width: 280px;
+    height: 40px;
+    background: #fff;
+    color: #999;
+    border: 1px solid #459dff;
+    padding-left: 20px;
+    float: left;
+    margin-top: 20px;
+}
+.search_f a{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.search_f form{
+    font-size: 18px;
+    height: 95px;
+    width: 360px;
+    display: block;
+}
+.search_f form img{
+    height: 22px;
+    width: 22px;
+    margin-top: 2px;
+}
+.search_f{
+    float: right;
+    padding-right: 54px;
+    width: 400px ;
+    height: 95px;
+}
+.search .re{
+    color:red ;
+}
+
+/*                     需  求            头 部                          */
+
+.xuqiuT{
+    height: 502px;
+
+}
+
+.xuqiuT ul{
+    height: 43px;
+    margin: 0 auto;
+    border-bottom: 1px solid #055faa;
+    border-top: 1px solid #055faa;
+    background: #055faa;
+    color: #ffffff;
+}
+
+.xuqiuT ul li{
+    font-weight: 600;
+    width: 110px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 44px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+
+}
+.xuqiuT ul li a{
+    color: #ffffff;
+}
+
+
+
+.xuqiuT ul li:first-child{
+    margin-left: 140px;
+
+}
+
+
+.xuqiuT ul li:first-child+li{
+    background: #ffffff;
+    color: #333;
+
+    -webkit-box-shadow:#055faa 0 0 2px inset;
+    -moz-box-shadow:#055faa 0 0 2px inset;
+    box-shadow:#055faa 0 0 2px inset;
+
+}
+
+
+
+.bannerTu{
+    position: relative;
+    height: 458px;
+    background:url("../img/xuqiudating/banb-5(1).png") no-repeat;
+}
+
+.bannerTu>a{
+    position: absolute;
+    display: block;
+    height: 66px;
+    width: 186px;
+    left: 260px;
+    top: 288px;
+    background: url("../img/xuqiudating/anniu.png") no-repeat;
+}
+
+
+.fa{
+    position: absolute;
+    height: 112px;
+    width: 1260px;
+    background: darkgrey;
+    bottom: -56px;
+    left: 0;
+
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(68,102,113,0.6)),to(rgba(46,74,83,0.6)));
+    background: -moz-linear-gradient(top, rgba(68,102,113,0.6), rgba(46,74,83,0.6));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5A446671', endColorstr='#5A2E4A53'); /* IE6,IE7 */
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6446671', endColorstr='#E62E4A53')"; /* IE8 */
+
+}
+
+.fa a{
+    background: red;
+    float: left;
+    width: 158px;
+    height: 95px;
+    margin-left: 46px;
+    margin-top: 8px;
+
+
+}
+
+.fa a:first-child{
+    margin-left: 143px;
+    background: url("../img/xuqiudating/fa1.png") no-repeat;
+}
+
+.fa a:first-child+a{
+
+    background: url("../img/xuqiudating/fa2.png") no-repeat;
+}
+
+.fa a:first-child+a+a{
+
+    background: url("../img/xuqiudating/fa3.png") no-repeat;
+}
+
+.fa a:first-child+a+a+a{
+   ;
+    background: url("../img/xuqiudating/fa4.png") no-repeat;
+}
+
+.fa a:last-child{
+
+    background: url("../img/xuqiudating/fa5.png") no-repeat;
+}
+
+em,i{
+    font-style:normal
+}
+
+.content{
+    padding-top: 57px;
+    height: 100%;
+
+}
+
+.gongC{
+    height: 324px;
+    padding-top: 43px;
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.gongC div{
+    float: left;
+}
+
+
+.leM{
+    width: 92px;
+    height:324px;
+    background:url("../img/xuqiudating/标题.png") no-repeat;
+    margin-right: 44px;
+    background-position: -3px 0;
+}
+
+.can{
+    width: 954px;
+    height: 272px;
+    margin-top: 8px;
+}
+
+.can ul{
+  height: 22px;
+    width: 954px;
+    border-bottom: 2px solid #055faa;
+}
+
+.tab_menu ul li{
+    float: left;
+    border-left: 2px solid #055faa;
+    border-top: 2px solid #055faa;
+    border-right: 2px solid #055faa;
+    color: #055faa;
+    width: 82px;
+    overflow:hidden;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 14px;
+    letter-spacing: 18px;
+    text-align: right;
+}
+
+
+.tab_menu ul .on{
+    background:#055faa;
+    color: #ffffff;
+}
+
+
+
+.can p{
+    font-size: 14px;
+    border-bottom: 1px dashed #333;
+    margin-top: 10px;
+    height: 18px;
+}
+
+
+.ll{
+    width: 444px;
+    height: 221px;
+}
+
+
+
+.rr{
+    width: 444px;
+    height: 221px;
+    margin-left: 66px;
+}
+
+
+
+
+.rr p:first-child{
+    margin-top: 0;
+}
+
+.ll p:first-child{
+    margin-top: 0;
+}
+
+
+/*                                           修改                               */
+
+
+
+.ll p a{
+    width: 290px;
+    overflow: hidden;
+    display: inline-block;
+    height: 19px;
+}
+.rr p a{
+    width: 290px;
+    height: 19px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.can p i{
+    float: right;
+}
+
+.tab_box>div{
+    margin-top: 22px;
+}
+.tab_box>div{
+    display: none;
+}
+
+
+.gongC>a{
+    float: right;
+    color: #055faa;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.tab_box .non{
+    display: block;
+}
+/*                  广告     广告                                             */
+
+.guangG{
+    height: 110px;
+    background: red;
+    width: 1090px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.guangG img{
+    height: 100%;
+    width: 100%;
+
+}
+/*                                         采购类                                            */
+
+
+.caiG{
+    height: 310px;
+    padding-top: 22px;
+    width: 1090px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.caiG div{
+    float: left;
+}
+
+
+
+
+.caiG>a{
+    float: right;
+    color: #e94f06;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 12px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: 136px;
+}
+
+
+
+.cai{
+    width: 116px;
+    height: 310px;
+    background: url(../img/xuqiudating/标题4.png) no-repeat;
+    margin-left: 20px;
+    background-position:6px 0;
+}
+
+.caiGou ul{
+    height: 22px;
+    width: 954px;
+    border-bottom: 2px solid #e94f06;
+}
+
+.caiGou ul li{
+    float: left;
+    border-left: 2px solid #e94f06;
+    border-top: 2px solid #e94f06;
+    border-right: 2px solid #e94f06;
+    color: #e94f06;
+    width: 82px;
+    font-size: 14px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-right: 14px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.caiGou ul .on{
+    background:#e94f06;
+    color: #ffffff;
+}
+
+
+
+.cGou>div{
+    margin-top: 22px;
+}
+.cGou>div{
+    display: none;
+}
+
+.cGou .non{
+    display: block;
+}
+
+/*                                                广告               2                                     */
+
+
+.guangG-2{
+    height: 110px;
+    background: palevioletred;
+    width: 1090px;
+    margin: 36px auto;
+}
+
+
+/*                           设计类                和             物业类                                                            */
+
+.shij-wuye{
+    margin: 0 auto;
+    height: 385px;
+    width: 1090px;
+
+
+}
+
+.shij-wuye>div{
+    float: left;
+    height: 385px;
+    width: 528px;
+}
+
+.shij{
+
+}
+
+.wuye{
+    margin-left: 34px;
+}
+
+
+.shij-wuye div span{
+    display: block;
+    width: 184px;
+    height: 48px;
+    margin-left: 178px;
+}
+
+.shij span{
+    background: url("../img/xuqiudating/标题3.png") no-repeat;
+}
+
+.wuye span{
+    background: url("../img/xuqiudating/标题5.png") no-repeat;
+}
+
+.wuye-1,.shij-1{
+    margin-top: 35px;
+    height: 300px;
+}
+
+.wuye-2,.shij-2{
+    width: 75px;height: 280px;
+
+}
+
+.wuye-3,.shij-3{
+    width: 444px;
+
+    height: 280px;
+    margin-left: 8px;
+}
+
+
+.shij .shij-1 div,.wuye .wuye-1 div{
+    float: left;
+}
+
+
+.shij-wuye ul{
+    border-right: 4px solid #14561f;
+    height: 280px;
+}
+
+.shij-1>a{
+    font-size: 14px;
+    float: right;margin-top: 4px;
+    color: #14561f;
+}
+.wuye-1>a{
+    font-size: 14px;
+    float: right;margin-top: 4px;
+    color: #af3678;
+}
+
+
+.shij-wuye ul li{
+    cursor: pointer;
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-bottom: 1px solid #14561f;
+    border-left: 1px solid #14561f;
+    border-top: 1px solid #14561f;
+    margin-bottom: 6px;
+}
+
+
+.shij-wuye i{
+    float: right;
+}
+
+
+.zaoJia i{
+    float: right;
+}
+
+
+.wuye-3 p,.shij-3 p{
+    font-size: 14px;
+    margin-top: 4px;
+    border-bottom: 1px dashed #cacaca;
+    width: 444px;
+    line-height: 22px;
+
+}
+
+.wuye-3 p a i,.shij-3 p a i{
+    float: right;
+}
+
+
+.wuye-3>div,.shij-3>div{
+    display: none;
+}
+
+.wuye-3 .non,.shij-3 .non{
+    display: block;
+}
+
+.shij-2 ul .on{
+    background:#14561f;
+    color: #ffffff;
+}
+
+
+.wuye-2 ul .on{
+    background:#af3678;
+    color: #ffffff;
+}
+.wuye-2 ul li{
+    cursor: pointer;
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-bottom: 1px solid #af3678;
+    border-left: 1px solid #af3678;
+    border-top: 1px solid #af3678;
+    margin-bottom: 6px;
+}
+
+.wuye ul{
+    border-right: 4px solid #af3678;
+    height: 280px;
+}
+
+/*                                                广告               3                                    */
+
+.guangG-3{
+    height: 110px;
+    width: 1090px;
+    margin: 36px auto;
+    background: darkgrey;
+}
+
+/*                                                          造价 咨询                                                            */
+
+.zaoJia{
+    height: 320px;
+    width: 1090px;
+    margin: 0 auto;
+}
+
+
+.zaoJia>div{
+    float: left;
+}
+
+.zaoJia-1{
+    width: 604px;
+    height: 320px;
+}
+.zaoJia-1 div{
+    float: left;
+}
+
+.guangG-4{
+    height:292px;
+    width:412px;
+    background: red;
+    margin-top: 8px;
+    margin-left: 74px;
+}
+
+
+.zajialog{
+    width: 92px;
+    height: 320px;
+    background: url("../img/xuqiudating/标题2.png") no-repeat;
+    background-position: -4px 0;
+
+}
+
+
+.zaoJia-2{
+    width: 468px;
+    height: 270px;
+    margin-top: 8px;margin-left: 44px;
+}
+
+.zaoJia-3{
+    width: 468px;
+    height: 24px;
+}
+
+.zaoJia-3 ul{
+    border-bottom: 2px solid #c51013;
+    width: 468px;
+
+}
+
+.zaoJia-3 ul li{
+    width: 84px;height: 21px;
+    border-top: 1px solid #c51013;
+    border-left: 1px solid #c51013;
+    border-right: 1px solid #c51013;
+    background: #c51013;
+    color: #ffffff;
+    text-align: center;
+    line-height: 21px;
+}
+.zaoJia-4>div{
+    margin-top: 16px;
+}
+
+
+
+.zaoJia-4 p {
+    font-size: 14px;
+    margin-top: 4px;
+    border-bottom: 1px dashed #cacaca;
+    width: 468px;
+    line-height: 23px;
+
+}
+
+.zaoJia-4 p a i{
+    float: right;
+}
+
+
+.zaoJia-1>a{
+    float: right;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 8px;
+    color: #c51013;
+}
+
+/*                           尾部 需求        尾部需求                                                                            */
+
+.wenbuyingyong{
+    height: 200px;
+    margin: 0  auto;
+    margin-top: 56px;
+    margin-bottom: 35px;
+    width: 1090px;
+}
+
+
+.wenbuyingyong span{
+    float: left;
+    height: 200px;    width: 110px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.wenbuyingyong>ul{
+    float: left;
+}
+
+.wenbuyingyong>ul>li{
+    float: left;
+    width: 186px;
+    height: 200px;
+    margin-left: 10px;
+    background: #dddddd;
+}
+
+.wenbuyingyong>ul>li:hover{
+    background: #999999;
+    color: #ffffff;
+}
+
+.wenbuyingyong ol li:first-child{
+    margin-top: 10px;
+    font-size: 16px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+}
+
+
+
+.wenbuyingyong ol li{
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                  尾部                               尾部                            */
+.main_wenbu{
+    height: 124px;
+    background:#cecece;
+}
+
+.main_wenbu>p{
+    float: left;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+
+
+/*        尾部新修改        */
+
+.main_wenbu>p{
+    margin-left: 71px;
+}
+
+
+.main_wenbu>p:first-child{
+    margin-left: 350px;
+}
+
+.main_wenbu>p:first-child+p+p+p+p+p{
+    margin-left: 416px;
+}
+
+.main_wenbu>p:first-child+p+p+p+p+p+p{
+    margin-left: 475px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

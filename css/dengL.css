@@ -1,0 +1,165 @@
+
+@charset "utf-8";
+
+.tuCeng{
+    width: 1260px;
+    height: 800px;
+    background: url("../img/tcc.png") no-repeat;
+    margin: 0 auto;
+}
+.dengL{
+    display: inline-block;
+    width: 948px;height: 428px;
+    border: 1px solid #999999;
+    margin: 185px 155px;
+    background: #ffffff;
+    filter:alpha(opacity:70); opacity:0.7;  -moz-opacity:0.7;-khtml-opacity: 0.7;
+}
+
+.left{
+    float: left;
+    width: 479px;
+    /*  height: 352px;*/
+    margin-top: 38px;
+    margin-left: 80px;
+    border-right: 1px solid #999999;
+    /* margin-bottom: 50px;*/
+}
+.reght{
+    height: 320px;width: 302px;
+    background: url("../img/denglu/ll%20(2).png") no-repeat;
+    margin-top: 54px;
+    margin-left:  42px;
+    float: left;
+
+}
+
+.left span{
+    display: block;
+    height: 61px;
+    line-height: 61px;
+    width: 450px;
+    border-bottom: 1px dashed #999999;    margin-bottom: 12px;
+}
+.left span p{
+    display: block;
+    float: left;
+}
+.left span>p{
+    font-size: 36px;
+}
+
+
+.left span>a{
+    font-size: 18px;
+    margin-left: 230px;
+    margin-top: 4px;
+    color: #459dff;
+}
+
+
+.xL1,.xL2{
+    margin-top: 14px;
+    font-size: 18px;
+}
+
+.xL1 input,.xL2 input{
+    border: 1px solid #999999;
+    height: 28px;
+    width: 186px;
+    border-radius: 2px;    margin-left: 5px;
+}
+
+
+.xL4{
+    height: 66px;
+}
+
+.xL4>button{
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    background: #459dff;
+    width: 80px;
+    height: 26px;
+    border-radius: 4px;
+    margin-top: 26px;
+    margin-left:54px ;
+    float: left;
+    cursor: pointer;
+}
+.xL4>.de{
+    float: left;
+    margin-left: 38px;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.xL3{
+    margin-top: 14px;
+    font-size: 12px;margin-left: 50px;
+}
+.xL3 input{
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.left >p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.tuCeng .dengL .left>a{
+    margin-top: 6px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    float: left;
+
+}
+.tuCeng .dengL .left>a:last-child{
+    margin-left: 21px;
+}
+
+
+
+.tuCeng .dengL .left a img{
+    width: 100%;
+    height: 100%;
+}
+
+.msg-wrap{min-height:31px;height:auto!important;height:31px;margin:2px 0 5px}
+.msg-warn{position:relative;background:#fff6d2;color:#666;border:1px solid #ffe57d;padding:3px 10px 3px 40px;line-height:18px;height:18px}
+.msg-error{ width: 184px; position:relative;background:#ffebeb;color:#e4393c;border:1px solid #e4393c;padding:3px 10px 3px 40px;line-height:18px;min-height:18px;_height:18px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

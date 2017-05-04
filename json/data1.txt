@@ -1,0 +1,12 @@
+[
+
+{"imgSrc":"img/lunbotu/paoMadeng/huashang.png","desc":"这是测试图片"},
+{"imgSrc":"img/lunbotu/paoMadeng/logo.png","desc":"这是测试图片"},
+{"imgSrc":"img/lunbotu/paoMadeng/zhongyi.png","desc":"这是测试图片"},
+{"imgSrc":"img/lunbotu/paoMadeng/logo1.png","desc":"这是测试图片"},
+{"imgSrc":"img/lunbotu/paoMadeng/tonggao.png","desc":"这是测试图片"},
+{"imgSrc":"img/lunbotu/paoMadeng/logo2.png","desc":"这是测试图片"}
+
+]
+
+

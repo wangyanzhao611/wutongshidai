@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html  xmlns:bd=http://www.baidu.com/2010/xbdml xmlns=http://www.w3.org/1999/xhtml>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>发布需求</title>
+<!--
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+    <meta http-equiv=Content-Type content="text/html" charset="utf-8">
+    <meta http-equiv=X-UA-Compatible content=IE=EmulateIE9>
+
+    <script>var wpo={start:new Date*1,pid:109,page:'superpage'}</script>
+    <meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+
+
+    &lt;!&ndash;[if lt IE9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]&ndash;&gt;
+    &lt;!&ndash;[if lte IE 8]>
+    <noscript>
+        <style>.html5-wrappers{display:none!important;}</style>
+        <div class="ie-noscript-warning">您的浏览器禁用了脚本，请<a href="">查看这里</a>来启用脚本!或者<a href="/?noscript=1">继续访问</a>.
+        </div>
+    </noscript>
+    <![endif]&ndash;&gt;
+
+-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/xuqiufabu/xlogo.png" media="screen" />
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/fabuxuqiu.css"/>
+
+</head>
+<body>
+<div class="header">
+    <div class="banx">
+        <a href="index.html"> < 返回首页</a>
+        <div class="clear"></div>
+        <div class="con">
+            <div class="con-1">
+                <div class="logo"></div>
+                <p></p>
+            </div>
+            <div class="con-2">
+                <div>选择类目</div>
+                <div>描述您的需求</div>
+                <div>发布成功</div>
+            </div>
+            <div class="con-3">
+                <form name="form" action="/needs.do" method="post" enctype="multipart/form-data">
+                    <div class="le">
+                        <!--  onkeydown 为键盘事件  -->
+                        <div class="zhao">
+                            <label for="zhao"><i>*</i>工程名称</label><input  type="text" id="zhao" value=""  placeholder="不得超过50个字符" />
+                        </div>
+                        <div class="zhaobiao">
+                            <label for="zhaobiao"><i>*</i>招标单位</label><input  type="text" id="zhaobiao" value=""  placeholder="不得超过50个字符"/>
+                        </div>
+                        <div class="gongcheng">
+                            <label for="gongcheng">招标代理机构</label><input  type="text" id="gongcheng"  value="" placeholder="不得超过50个字符" />
+                        </div>
+                        <div class="fanwei">
+                            <label for="fanwei"><i>*</i>项目类别</label><input  type="text" id="fanwei" value="" placeholder="不得超过50个字符" />
+                        </div>
+                       <!-- <div class="gongqi">
+                            <label for="gongqi"><i>*</i>工期</label><input name="lname"  type="number"  onkeyup= "if(! /^[0-9]*[1-9][0-9]*$/.test(this.value)){alert('只能整数');}"   id="gongqi" placeholder="只能填写整数" /><p>自然日</p>
+                        </div>-->
+
+                        <div class="gongqi">
+                            <label for="gongqi"><i>*</i>工期</label><input  id="gongqi"  onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"><p>日历天</p>
+                        </div>
+
+                        <div class="zhiliang">
+                            <label for="zhiliang"><i>*</i>质量要求</label><input  type="text" id="zhiliang"  value="合格" readonly="readonly" />
+                        </div>
+
+                        <div class="zhijia">
+                            <label for="zhijia"><i>*</i>合同估算价</label><input  type="number" id="zhijia" step="0.01" placeholder="只能保留两位小数点"  onkeypress="return myNumberic(event)"/><p>元</p>
+                        </div>
+
+                        <div class="ghuding" id="list">
+                            <input type="checkbox" name="ding" id="gu" value="固定总价合同"/>
+                            <p>固定总价合同</p>
+                            <input type="checkbox" name="ming" id="ze" value="增值税专用发票"/>
+                            <p>增值税专用发票</p>
+                            <input type="checkbox" name="zing" id="zh" value="增值税专用发票"/>
+                            <p>超价废标</p>
+                        </div>
+
+                        <div class="xiangmu">
+                            <label for="xiangmu"><i>*</i>项目地点</label><input  type="text" id="xiangmu" placeholder="不得超过50个字符" />
+                        </div>
+
+                        <div class="baojiajiezhi" id="baojiajiezhi">
+                            <label ><i>*</i>投标文件递交截止时间</label>
+                            <select name="year1" id="year1" class="s_center"></select>年
+                            <select name="month1" id="month1" class="s_center"></select>月
+                            <select name="day1" id="day1" class="s_center"></select>日
+                        </div>
+
+                        <div class="baozheng">
+                            <label for="baozheng"><i>*</i>投标保证金</label><input step="0.01" type="number" id="baozheng" placeholder="只能保留两位小数" onkeypress="return myNumberic(event)"/><p>元</p><p class="baifei">(不超过招标项目估算价的2%)</p>
+                        </div>
+
+                    </div>
+                    <!--                          右  右                     右侧                             -->
+                    <div class="re">
+                        <div class="zhaob">
+                            <label for="zhaob"><i>*</i>招标地址</label><input  type="text" id="zhaob" placeholder="不得超过50个字符" />
+                        </div>
+                        <div class="zhaobiaoren">
+                            <label for="shouJhao"><i>*</i>联系人</label>姓名<input  type="text" class="lianXren" id="lianXren" placeholder="二到五个字" />手机号<input id="shouJhao" class="shouJhao" type="number" placeholder="有效手机号" />
+                        </div>
+                        <div class="xmshuom">
+                            <label for="shuoM">其他项目说明 <p>(不超过500字)</p></label>
+                            <textarea class="content" type="text" id="shuoM" placeholder="不超过500个汉字"  onkeyup="words_deal()"></textarea>
+                        </div>
+
+                        <div class="shangchuan">
+                              <label for="shangC"><i>*</i>上传附件</label>招标文件<input  type="file" id="shangC" onchange="getPhotoSize1(this)"/>
+                        </div>
+
+                       <!--             eeee                            -->
+                      <!--    <div class="shangchuan">
+                              <img id="tempimg" dynsrc="" src="" style="display:none" />
+                              <input type="file" name="file" id="fileuploade" size="40" />
+                              <input type="button" name ="check" value="checkfilesize" onclick="checkfile()"/>
+                          </div>-->
+
+                          <div class="shangchuan">
+                              <label for="zhaoBw"><i></i></label>投标文件<input  type="file" onchange="getPhotoSize2(this)" id="zhaoBw"/>
+                          </div>
+                        <p>添加附件不大于10M，仅支持doc/docx</p>
+                        <div class="clear"></div>
+                        <div class="tijiao">
+                            <button id="but">提交</button><p>(请填写完整再提交)</p>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="application/javascript" src="JS/jquery-1.11.3.js"></script>
+<script type="application/javascript" src="JS/fBxq.js"></script>
+<script>
+    new YMDselect('year1','month1','day1');
+</script>
+<script type="text/javascript">
+    /*                                                  控制字节                                       */
+
+    $("input").change(function(){
+
+        if($("input[name='ding']")=="ding"){
+            return false;
+        }
+/*                       字节最长                         最短                        限制                           */
+
+        var value=$(this).val();
+        if(value.length>50){
+            // 内容超长了
+            alert("长度不能大于50个字符");
+            $(this).css("borderColor","red");
+            return false;
+        }else if(value.length<2){
+            // 提示长度要大于2
+            $(this).css("borderColor","red");
+            alert("长度要大于2个字符");
+            return false;
+        }else{
+            $(this).css("borderColor","");
+        }
+    });
+
+/*                       文本域                   字数限制                       */
+
+    function words_deal()
+    {
+        var curLength=$("#shuoM").val().length;
+        if(curLength>5)
+        {
+            var num=$("#shuoM").val().substr(0,5);
+            $("#shuoM").val(num);
+
+            alert("不得超过500字，多出的字将被截断！" );
+        }
+    }
+
+ /*                     只保留            两位          小数                       */
+
+    function myNumberic(e,len) {
+
+        var obj=e.srcElement || e.target;
+
+        var dot=obj.value.indexOf(".");   //alert(e.which);
+
+        len =(typeof(len)=="undefined")?2:len;
+
+        var  key=e.keyCode|| e.which;
+
+        if(key==8 || key==9 || key==46 || (key>=37  && key<=40))//这里为了兼容Firefox的backspace,tab,del,方向键
+
+            return true;
+
+        if (key<=57 && key>=48) { //数字
+
+            if(dot==-1)//没有小数点
+
+                return true;
+
+            else if(obj.value.length<=dot+len)//小数位数
+
+                alert("只保留两位小数");
+
+                return true;
+
+        } else if((key==46) && dot==-1){//小数点
+
+            alert("注意小数点");
+
+            return true;
+
+        }
+
+        return false;
+    }
+
+    /*                   校验               校验                          */
+
+    document.getElementById("but").onclick=function(){
+
+
+        var re = /^[a-zA-Z\u4e00-\u9fa5][a-zA-Z0-9\u4e00-\u9fa5]*$/; //不能出现特殊字符
+
+        if($("#zhao").val()=="" || $("#zhao").val()=="undefined"){
+            $("#zhao").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert("工程名称不能为空");
+            return false;
+        } else if(!re.test($("#zhao").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#zhao").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#zhao").val()){
+            $("#zhao").css("borderColor","");
+            $(".tijiao p").css("color","");
+        }
+
+
+        if($("#zhaobiao").val()=="" || $("#zhaobiao").val()=="undefined"){
+            $("#zhaobiao").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("招标单位不能为空");
+            return false;
+        }else if(!re.test($("#zhaobiao").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#zhaobiao").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#zhaobiao").val()){
+            $("#zhaobiao").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+
+        if($("#gongcheng").val()=="" || $("#gongcheng").val()=="undefined"){
+            $("#gongcheng").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("招标代理机构不能为空");
+            return false;
+        }else if(!re.test($("#gongcheng").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#gongcheng").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#gongcheng").val()){
+            $("#gongcheng").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+
+        if($("#fanwei").val()=="" || $("#fanwei").val()=="undefined"){
+            $("#fanwei").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("项目类别不能为空");
+            return false;
+        }else if(!re.test($("#fanwei").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#fanwei").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#fanwei").val()){
+            $("#fanwei").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+/*                                                      工期                                                             校验                                                        */
+
+
+        if($("#gongqi").val()=="" || $("#gongqi").val()=="undefined"){
+            $("#gongqi").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请填写工期");
+            return false;
+        }else if($("#gongqi").val()){
+            $("#gongqi").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+
+        if($("#zhiliang").val()=="" || $("#zhiliang").val()=="undefined"){
+            $("#zhiliang").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请填写质量要求");
+            return false;
+        }else if(!re.test($("#zhiliang").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#zhiliang").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#zhiliang").val()){
+            $("#zhiliang").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+        if($("#zhijia").val()=="" || $("#zhijia").val()=="undefined"){
+            $("#zhijia").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请填写价格");
+            return false;
+        }else if($("#zhijia").val()){
+            $("#zhijia").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+
+       if($("#xiangmu").val()=="" || $("#xiangmu").val()=="undefined"){
+           $("#xiangmu").css("borderColor","red");    $(".tijiao p").css("color","red");
+           alert("请填项目地点");
+            return false;
+        }else if(!re.test($("#xiangmu").val())){ // 返回true,代表在字符串中找到了非数字。
+           $("#xiangmu").css("borderColor","red");
+           $(".tijiao p").css("color","red");
+           alert('不能输入特殊字符');
+           return false;
+       }else if($("#xiangmu").val()){
+           $("#xiangmu").css("borderColor",""); $(".tijiao p").css("color","");
+       }
+
+
+        /*                       时间 戳                               */
+
+
+        if($("#year1").val()=="0" || $("#year1").val()=="undefined"){
+            $("#year1").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请选择年份");
+            return false;
+        }else if($("#year1").val()!=="0"){
+            $("#year1").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+        if($("#month1").val()=="0" || $("#month1").val()=="undefined"){
+            $("#month1").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请选择月份");
+            return false;
+        }else if($("#month1").val()!=="0"){
+            $("#month1").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+        if($("#day1").val()=="0" || $("#day1").val()=="undefined"){
+            $("#day1").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请选择日");
+            return false;
+        }else if($("#day1").val()!=="0"){
+            $("#day1").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+       if($("#baozheng").val()=="" || $("#baozheng").val()=="undefined"){
+           $("#baozheng").css("borderColor","red");    $(".tijiao p").css("color","red");
+           alert("请填写投标保证金");
+            return false;
+        }else if($("#baozheng").val()){
+           $("#baozheng").css("borderColor",""); $(".tijiao p").css("color","");
+           var w=$("#baozheng").val()
+           console.log(w);
+       }
+
+
+      if($("#zhaob").val()=="" || $("#zhaob").val()=="undefined"){
+          $("#zhaob").css("borderColor","red");    $(".tijiao p").css("color","red");
+          alert("请填写招标地址");
+            return false;
+        }else if(!re.test($("#zhaob").val())){ // 返回true,代表在字符串中找到了非数字。
+          $("#zhaob").css("borderColor","red");
+          $(".tijiao p").css("color","red");
+          alert('不能输入特殊字符');
+          return false;
+      }else if($("#zhaob").val()){
+          $("#zhaob").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+/*      联系人                            校验                */
+
+        var de=/^1[34578]\d{9}$/;
+
+        if($("#lianXren").val()=="" || $("#lianXren").val()=="undefined"){
+            $("#lianXren").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("联系人");
+            return false;
+        }else if($("#lianXren").val()){
+            $("#lianXren").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+        if($("#shouJhao").val()=="" || $("#shouJhao").val()=="undefined"){
+            $("#shouJhao").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("请填写手机号");
+            return false;
+        }else if(!de.test($("#shouJhao").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#shouJhao").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('手机号无效');
+            return false;
+        }else if($("#shouJhao").val()){
+            $("#shouJhao").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+        /*                    div             */
+
+        if($("#shuoM").val()=="" || $("#shuoM").val()=="undefined"){
+          $("#shuoM").css("borderColor","red");    $(".shuoM p").css("color","red");
+          alert("请填项目说明");
+            return false;
+        }else if(!re.test($("#shuoM").val())){ // 返回true,代表在字符串中找到了非数字。
+            $("#shuoM").css("borderColor","red");
+            $(".tijiao p").css("color","red");
+            alert('不能输入特殊字符');
+            return false;
+        }else if($("#shuoM").val()){
+          $("#shuoM").css("borderColor",""); $(".shuoM p").css("color","");
+        }
+        $(".tijiao p").css("color","");
+
+
+        if($("#shangC").val()=="" || $("#shangC").val()=="undefined"){
+            $("#shangC").css("borderColor","red");    $(".tijiao p").css("color","red");
+            alert("必须上传招标文件");
+            return false;
+        }else if($("#shangC").val()){
+            $("#shangC").css("borderColor",""); $(".tijiao p").css("color","");
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+/*                             上传文件的大小校验以及报错  ie 9以及以下是不支持的                                 */
+
+
+    function getPhotoSize1(obj){
+        photoExt=obj.value.substr(obj.value.lastIndexOf(".")).toLowerCase();//获得文件后缀名
+        var fileSize = 0;
+        var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+
+        console.log(obj);
+
+        if (isIE && !obj.files) {
+            var filePath = obj.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            var file = fileSystem.GetFile (filePath);
+            console.log(file);
+            fileSize = file.Size;
+        }else {
+            fileSize = obj.files[0].size;
+        }
+        fileSize=Math.round(fileSize/1024*1024)/1000; //单位为KB
+        console.log(fileSize);
+
+
+        /*             大于10MB 不能使用 BUT提交   改小了以后 可以重新提交               */
+
+        if(fileSize>=100){
+            $(".shang").css("borderColor","red");
+
+            $("#zhaoBw").attr("disabled",true);
+
+            $("#but").attr("disabled",true);
+            alert("文件不能大于10MB，请重新上传!");
+            return false;
+        }else if(fileSize<100){
+            $("#zhaoBw").attr("disabled",false);
+            $("#but").attr("disabled",false);
+
+        }
+
+    }
+
+    function getPhotoSize2(obj){
+        photoExt=obj.value.substr(obj.value.lastIndexOf(".")).toLowerCase();//获得文件后缀名
+        var fileSize = 0;
+        var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+
+        console.log(obj);
+
+        if (isIE && !obj.files) {
+            var filePath = obj.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            var file = fileSystem.GetFile (filePath);
+            console.log(file);
+            fileSize = file.Size;
+        }else {
+            fileSize = obj.files[0].size;
+        }
+        fileSize=Math.round(fileSize/1024*1024)/1000; //单位为KB
+        console.log(fileSize);
+
+
+        /*             大于10MB 不能使用 BUT提交   改小了以后 可以重新提交               */
+
+        if(fileSize>=100){
+            $(".shang").css("borderColor","red");
+
+            $("#shangC").attr("disabled",true);
+
+            $("#but").attr("disabled",true);
+
+            alert("文件不能大于10MB，请重新上传!");
+            return false;
+        }else if(fileSize<100){
+            $("#shangC").attr("disabled",false);
+            $("#but").attr("disabled",false);
+        }
+
+    }
+
+
+
+/*                      第二种 文件上传 校验                                        */
+
+/*
+
+    var maxsize = 2*100*100;//2M
+    var errMsg = "上传的附件文件不能超过2M！！！";
+    var tipMsg = "您的浏览器暂不支持计算上传文件的大小，确保上传文件不要超过2M，建议使用IE、FireFox、Chrome浏览器。";
+    var  browserCfg = {};
+    var ua = window.navigator.userAgent;
+    if (ua.indexOf("MSIE")>=1){
+        browserCfg.ie = true;
+    }else if(ua.indexOf("Firefox")>=1){
+        browserCfg.firefox = true;
+    }else if(ua.indexOf("Chrome")>=1){
+        browserCfg.chrome = true;
+    }
+    function checkfile(){
+        try{
+            var obj_file = document.getElementById("fileuploade");
+            if(obj_file.value==""){
+                alert("请先选择上传文件");
+                return;
+            }
+            var filesize = 0;
+            if(browserCfg.firefox || browserCfg.chrome ){
+                filesize = obj_file.files[0].size;  //如果用jquery是obj_file[0]
+            }else if(browserCfg.ie){
+                var obj_img = document.getElementById('tempimg');
+                obj_img.dynsrc=obj_file.value;
+                filesize = obj_img.fileSize;
+
+            }else{
+                alert(tipMsg);
+                return;
+            }
+            if(filesize==-1){
+                alert(tipMsg);
+                return;
+            }else if(filesize>maxsize){
+                console.log(filesize);
+                alert(errMsg);
+                return;
+            }else{
+                alert("文件大小符合要求");
+                return;
+            }
+        }catch(e){
+            alert(e);
+        }
+    }
+*/
+
+</script>
+
+</html>
+
+
+
+
+

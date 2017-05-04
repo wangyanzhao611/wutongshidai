@@ -1,0 +1,926 @@
+@charset "utf-8";
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#ff0000;}
+
+img,input{
+    outline: none;border: none;vertical-align: middle;
+}
+.fanHui{
+    position: fixed;
+    bottom:150px;
+    right:50px;
+    width: 89px;
+    height:89px;
+    border-radius: 89px;
+    box-shadow: 4px 4px 10px #000;
+    background:url("../img/fanhui0.png") no-repeat;
+    font-weight: bold;
+    display: none;
+}
+.fanHui:hover{
+    background:url("../img/fanhui1.png") no-repeat;
+}
+
+.clear{clear:both; height: 0; line-height: 0; font-size: 0}
+
+.banxin1260{
+    background-color: #cecece;
+    height: 100%;
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.banx{
+    width: 1200px;
+    height: 100%;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.banx-b{
+    width: 1150px;
+    margin: 0 auto;
+}
+
+
+ul,ol{
+    list-style: none;
+}
+/*            头部           踩踩踩踩踩踩踩踩踩踩踩踩踩踩踩          */
+.nav{
+    /*float: left;*/
+    width: 1260px;
+    height: 40px;
+    background-color: #eaeaea;
+    margin: 0 auto;
+    margin-bottom: 6px;
+}
+.nav>ul{
+    float: right;
+    height: 14px;
+
+}
+.nav>ul>li,.nav>span{
+    float: left;
+    padding-right:35px;
+    margin-top: 8px;
+}
+
+.nav>ul>li{
+    padding-left: 35px;
+}
+.nav>ul>li:nth-child(2),.nav>ul>li:nth-child(3),.nav>ul>li:nth-child(4),.nav>ul>li:nth-child(5),.nav>ul>li:nth-child(6){
+    border-left: 1px solid #666666;
+}
+
+.nav>span{
+    color:#666666;
+    padding-left: 20px;
+}
+.banx{
+    width: 1200px;
+    height: 100%;
+  /*  background-color: #ffffff;*/
+    background: url("../img/chenggonganli/tuceng2.jpg") no-repeat;
+    margin: 0 auto;
+}
+
+/*                     头部 广告                                      广告                                */
+.ben{
+    height: 619px;
+   /* background: turquoise;*/
+    background: url("../img/chenggonganli/toubu.png") no-repeat;
+}
+
+/*  规划                           规划             案例                */
+
+.guihua{
+    background:#ededed;
+    height: 570px;
+}
+
+
+.guihua .h div{
+    float: left;margin-top: 20px;
+}
+
+.guihua .h .err{
+    width: 282px;
+}
+.guihua .h .err .de{
+    margin-left: 82px;
+}
+
+
+
+.guihua .h div:first-child{
+    height: 240px;
+    width: 810px;
+}
+
+.guihua .h img{
+    height: 100%;
+    width: 100%;
+}
+
+.guihua .h{
+    margin-left: 20px;
+
+}
+
+.guihua .h .err h4{
+    font-size: 30px;
+    height: 30px;line-height: 30px;
+    font-weight: 600;
+    margin-left: 72px;
+}
+.guihua .h .err p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 60px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.guihua .f ul  li p i{
+    vertical-align: bottom;
+    color: #e64346;
+    font-style: normal;
+    margin-left: 26px;
+}
+
+.guihua .f ul  li p{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 12px;
+}
+.guihua .f ul{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.guihua .f ul li p img{
+    height: 100%;
+    width: 100%;
+}
+
+.guihua .f ul li{
+    float: left;
+    margin-left: 34px;
+}
+.guihua .f ul li:first-child{
+    margin-left: 0;
+}
+.guihua .f ul li p:first-child{
+    width: 252px;
+    height: 160px;
+    display: block;
+    margin-top: 0;
+}
+
+.guihua button{
+    height: 40px;
+    width: 160px;
+    border: none;
+    background: #459dff;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 495px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*     建筑设计案例                      建筑设计案例     */
+
+.jianzhu{
+    background:#ededed;
+    height: 570px;
+    margin-top: 40px;
+}
+
+.jianzhu .h div{
+    float: left;margin-top: 20px;
+}
+
+.jianzhu .h div:first-child{
+    height: 240px;
+    width: 524px;
+}
+.jianzhu .h .err{
+    margin-left: 34px;
+}
+
+.jianzhu .h img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.jianzhu .h{
+    margin-left: 20px;
+
+}
+.jianzhu .h .sans h4{
+    font-size: 30px;
+    height: 30px;line-height: 30px;
+    font-weight: 600;
+    margin-left: 72px;
+}
+
+.jianzhu .h .sans{
+    width: 282px;
+}
+
+
+.jianzhu .h .sans p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 60px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.jianzhu .h .sans .de{
+    margin-left: 78px;
+}
+
+
+.jianzhu .h .sans .ssss{
+    float: left;
+    margin-right: 10px;
+}
+.jianzhu .h .sans .www{
+    float: left;
+    margin-right: 10px;
+}
+
+
+.jianzhu .f ul  li p i{
+    vertical-align: bottom;
+    color: #e64346;
+    font-style: normal;
+    margin-left: 26px;
+}
+
+
+
+
+
+.jianzhu .f ul  li p{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 12px;
+}
+.jianzhu .f ul{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+.jianzhu .f ul li p img{
+    height: 100%;
+    width: 100%;
+}
+
+.jianzhu .f ul li{
+    float: left;
+    margin-left: 34px;
+}
+.jianzhu .f ul li:first-child{
+    margin-left: 0;
+
+}
+
+.jianzhu .f ul li p:first-child{
+    width: 272px;
+    height: 160px;
+    display: block;
+    margin-top: 0;
+}
+
+.jianzhu .f ul li:first-child+li+li p:first-child{
+    width: 498px;
+}
+
+
+.jianzhu button{
+    height: 40px;
+    width: 160px;
+    border: none;
+    background: #459dff;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 495px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*     效果图案例                  效果图案例      */
+.xiaoguo{
+    background: #ededed;
+    margin-top: 40px;
+    height: 570px;
+}
+.xiaoguo .l i{
+    font-style: normal;
+    color: #e64346;
+    margin-left: 26px;
+}
+
+.xiaoguo .l{
+    float: left;
+    margin-left: 18px;
+    margin-top: 18px;
+}
+.xiaoguo .l p{
+    margin-top: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+.xiaoguo .r{
+    float: left;
+    width: 640px;
+    height: 440px;
+}
+.xiaoguo .r i{
+    font-style: normal;
+    color: #e64346;
+    margin-left: 26px;
+}
+
+.xiaoguo .l div{
+    height: 420px;
+    width: 470px;
+}
+.xiaoguo .l div:hover{
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+.xiaoguo div img{
+    height: 100%;
+    width: 100%;
+}
+
+.zijian .h div:first-child:hover,.zijian .h .err:hover{
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+
+
+
+
+
+.xiaoguo .r .err{
+    float: left;
+    margin-left: 34px;
+    margin-top: 50px;
+}
+.xiaoguo .r .sans{
+    float: left;
+    margin-left: 34px;
+    margin-top: 50px;
+}
+.xiaoguo .r .err div:hover{
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+.xiaoguo .r .sans div:hover{
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+
+
+.xiaoguo .r .err{
+    width: 286px;
+    height: 240px;
+}
+.xiaoguo .r .sans{
+    width: 286px;
+    height: 240px;
+}
+
+
+.xiaoguo .r .err p{
+    margin-top: 12px;
+}
+.xiaoguo .r .sans p{
+    margin-top: 12px;
+}
+.xiaoguo .r div h4{
+    font-size: 30px;
+    height: 30px;line-height: 30px;
+    font-weight: 600;
+    margin-left: 256px;
+    margin-top: 20px;
+}
+.xiaoguo .r p{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+
+.banx .xiaoguo .r .hrt>p{
+    margin-left: 300px;
+}
+
+
+
+.xiaoguo .r .hrt p{
+    margin-top: 20px;
+    margin-left: 43px;
+}
+
+
+.xiaoguo .r .hrt span {
+    margin-left: 120px;
+    display: block;
+    width: 480px;
+}
+
+.xiaoguo .r .hrt span p{
+    float: left;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+}
+.xiaoguo button{
+    height: 40px;
+    width: 160px;
+    border: none;
+    background: #459dff;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 495px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*     其他工程                    其他工程          */
+
+.qita{
+    background: #ededed;
+    margin-top: 40px;
+    height: 570px;
+    position: relative;
+}
+.qita>span{
+    position: absolute;
+    top: 16px;
+    left: 86px;
+    width: 218px;
+    height: 130px;
+    display: block;
+}
+
+.qita>span h4{
+    font-size: 30px;    margin-left: 28px;
+    height: 30px;line-height: 30px;
+    font-weight: 600;
+}
+.qita>span p{
+    height: 14px;line-height: 14px;font-size: 14px;margin-left: 16px;float: left;margin-top: 20px;
+}
+
+.qita>span .de{
+    margin-left: 92px;
+}
+
+
+.qita div{
+    width: 380px;
+    height: 390px;
+    position: absolute;
+    float: left;
+    top: 148px;
+    left: 39px;
+    border: 10px solid #ededed;
+}
+
+
+
+
+*{transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;}
+
+.qita div:hover{
+    z-index: 1;
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+
+
+
+.qita .qqqr{
+    top: 79px;
+    left: 367px;
+}
+
+.qita .qqql{
+    top: 10px;
+    left: 667px;
+}
+
+
+
+.qita div span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height:30px;
+    line-height: 30px;
+    width: 380px;
+    background:#333333;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+
+.qita div p{
+    display: block;
+    color: #ffffff;
+    height: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 136px;
+}
+
+.qita div img{
+    height: 100%;
+    width: 100%;
+}
+
+.qita div p i{
+    font-style: normal;
+    color: #e64346;
+    margin-left: 10px;
+}
+
+
+/*                bim                BIM                       BIM          */
+
+.bim{
+    background:#ededed;
+    height: 570px;
+    margin-top: 40px;
+}
+
+.bim .f div{
+    float: left;margin-top: 20px;
+    width: 300px;
+}
+
+.bim .f div:first-child{
+    height: 240px;
+    width: 810px;
+}
+
+.bim .f img{
+    height: 100%;
+    width: 100%;
+}
+
+.bim .f{
+    margin-left: 20px;
+
+}
+
+.bim .f .err h4{
+    font-size: 30px;
+    height: 30px;line-height: 30px;
+    font-weight: 600;
+    margin-left: 120px;
+    margin-top: 60px;
+}
+
+.bim .f .err p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 96px;
+    height: 14px;
+    line-height: 14px;
+}
+/*                                       */
+
+.bim .h ul  li p i{
+    vertical-align: bottom;
+    color: #e64346;
+    font-style: normal;
+    margin-left: 26px;
+}
+
+.bim .h ul  li p{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 12px;
+}
+.bim .h ul{
+    margin-left: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.bim .h ul li p img{
+    height: 100%;
+    width: 100%;
+}
+
+.bim .h ul li{
+    float: left;
+    margin-left: 34px;
+    margin-top: 20px;
+}
+
+
+
+.bim .h ul li:first-child{
+    margin-left: 0;
+}
+.bim .h ul li p:first-child{
+    width: 252px;
+    height: 160px;
+    display: block;
+    margin-top: 0;
+}
+
+
+
+.bim .f .err .bi{
+    margin-left: 154px;
+    font-weight: 600;
+}
+
+.bim .f .err .ssss{
+    float: left;
+    margin-right: 20px;
+}
+
+.bim .f .err .www{
+    float: left;
+    margin-right: 20px;
+}
+
+
+.bim button{
+    height: 40px;
+    width: 160px;
+    border: none;
+    background: #459dff;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 495px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*             自建房                            别野案例            自建别野                            */
+
+.zijian{
+    background:#ededed;
+    height: 570px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.zijian .h div{
+    float: left;margin-top: 20px;
+    height: 240px;
+    width: 252px;
+}
+.zijian .h .err{
+    margin-left: 34px;
+}
+.zijian .h .sans{
+   width: 352px;    margin-left: 100px;
+}
+.zijian .h .sans p{
+    float: left;
+}
+
+
+.zijian .h .sans .de{
+   margin-left: 148px;
+    margin-right: 62px;
+}
+
+
+/*                  自建   hover 效果                      */
+.zijian .h img{
+    height: 100%;
+    width: 100%;
+    transition-duration:1.5s;
+}
+
+.zijian .h img:hover{
+    transform:scale(1.3) rotateY(360deg);
+}
+
+.zijian .f img{
+    height: 100%;
+    width: 100%;
+    transition-duration: 1.5s;
+}
+
+.zijian .f img:hover{
+    transform: scale(1.3) rotateY(360deg);
+}
+
+
+
+
+
+.zijian .h{
+    margin-left: 20px;
+
+}
+.zijian .h .sans h4{
+    font-size: 30px;
+    height: 30px;line-height: 30px;
+    font-weight: 600;
+    margin-left: 72px;
+}
+.zijian .h .sans p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 58px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.zijian .f ul  li p i{
+    vertical-align: bottom;
+    color: #e64346;
+    font-style: normal;
+    margin-left: 26px;
+}
+
+.zijian .f ul  li p{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 12px;
+}
+.zijian .f ul{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.zijian .f ul li p img{
+    height: 100%;
+    width: 100%;
+}
+
+.zijian .f ul li{
+    float: left;
+    margin-left: 34px;
+}
+.zijian .f ul li:first-child{
+    margin-left: 0;
+}
+.zijian .f ul li p:first-child{
+    width: 252px;
+    height:220px;
+    display: block;
+    margin-top: 0;
+}
+
+.zijian button{
+    height: 40px;
+    width: 160px;
+    border: none;
+
+    background: #459dff;
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 118px;
+    margin-top: 68px;
+    cursor: pointer;
+}
+
+    /*尾部                          尾部                       */
+.main_wenbu{
+    height: 124px;
+    width: 1200px;
+    background:#cecece;
+}
+
+.main_wenbu>p{
+    float: left;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+
+
+/*        尾部新修改        */
+
+.main_wenbu>p{
+    margin-left: 71px;
+}
+
+
+.main_wenbu>p:first-child{
+    margin-left: 350px;
+}
+
+.main_wenbu>p:first-child+p+p+p+p+p{
+    margin-left: 416px;
+}
+
+.main_wenbu>p:first-child+p+p+p+p+p+p{
+    margin-left: 475px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

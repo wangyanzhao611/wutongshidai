@@ -1,0 +1,175 @@
+
+@charset "utf-8";
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:#ff0000;}
+
+img,input{
+    outline: none;border: none;vertical-align: middle;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"]{-moz-appearance:textfield;}
+
+
+.clear{clear:both; height: 0; line-height: 0; font-size: 0}
+.header{
+    width: 69.4%;
+    height: 900px;
+    margin: 0 auto;
+}
+.banx{
+    /* width: 95.83%;*/
+    width: 1150px;
+    height: 100%;
+    margin: 50px auto;
+}
+.banx>a{
+    float: right;
+    margin-bottom: 10px;
+}
+/*   1150                   头部                           */
+.con{
+    width: 100%;
+    height: 680px;
+    border: 1px solid #999999;
+}
+.con .con-1{
+    height: 78px;
+    margin-left: 8%;
+}
+
+.logo{
+    width: 208px;
+    height: 62px;
+    background: url("../img/xuqiufabu/xuqiulogo.png") no-repeat;
+    margin-right: 50px;
+    margin-top: 8px;
+    float: left;
+}
+.con .con-1>p{
+    width: 158px;
+    height: 18px;
+    background: url("../img/xuqiufabu/zaoyang.png") no-repeat;
+}
+.content{outline:none;}
+
+.con p{
+    float: left;
+    margin-top: 32px;
+}
+.con-2{
+    font-size: 14px;
+    width: 920px;
+    border-top: 1px solid #999999;
+    height: 39px;
+    margin: 0 auto;
+}
+
+.con-2 div{
+    height: 28px;
+    line-height: 28px;
+    float: left;
+    width: 290px;
+    text-align: center;
+    margin-top: 12px;
+}
+.con-2 div:first-child{
+    margin-left: 2.717%;
+    background: #459dff;
+
+    color: #ffffff;
+}
+
+.con-2 div:first-child+div{
+    background: #cacaca;
+    color: #ffffff;
+}
+
+.con-2 div:first-child+div+div{
+
+    background: #cacaca;
+    color: #ffffff;
+}
+
+
+/*                         以下是 表格                       */
+
+
+.con ul{
+    width: 868px;
+    border: 1px solid #999999;
+    margin-top: 18px;
+    margin-left: 140px;
+}
+
+.con ul li{
+    height: 90px;
+    border-bottom: 1px solid #999999;
+}
+
+.con ul li:last-child{
+    border: none;
+}
+
+.con ul li p{
+    height: 90px;
+    width: 246px;
+    border-right: 1px solid #999999;
+    margin-top: 0;
+    font-size: 18px;
+    color: #459dff;
+    font-weight: 600;
+    line-height: 90px;
+    text-align: center;
+
+}
+
+.con ul li a{
+     height: 16px;
+    line-height: 16px;
+     font-size: 14px;float: left;
+    border-right: 1px solid #999999;
+    padding: 0 37px;
+    margin-top: 38px;
+
+}
+
+.con ul li:first-child+li a{
+    margin-top: 20px;
+}
+
+
+
+
+.con ul li a:last-child{
+    border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

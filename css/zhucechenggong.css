@@ -1,0 +1,118 @@
+
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input,img{
+    outline: none;
+    border: none;
+    vertical-align: middle;
+}
+button{
+    border: none;
+}
+
+.tuceng{
+    height: 800px;
+    width: 1260px;
+    margin: 0 auto;
+
+    background:url("../img/tcc.png") no-repeat;
+}
+
+.neiR{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    width: 958px;
+    margin: 10px 150px;
+    height: 658px;
+    display: inline-block;
+    background: #ffffff;
+}
+.neiR ul{
+    margin-top: 14px;
+    border-bottom: 1px solid #999999;
+    width: 918px;
+    height: 32px;
+    margin-left: 20px;
+}
+
+.neiR ul li{
+    float: left;
+    font-size: 18px;
+    margin-left: 70px;
+    font-weight: 900;
+    cursor:pointer
+}
+
+.neiR ul li i{
+    display: none;
+    height: 4px;
+    background: #459dff;
+    margin-top: 8px;
+
+}
+
+.neiR ul li:hover i{
+    display: block;
+}
+.tuceng>a{
+    float: right;
+    margin-right: 150px;
+    margin-top: 50px;
+    font-size: 14px;line-height: 14px;
+}
+
+.tuceng>a:hover{
+    color: red;
+}
+.neiR span{
+    display: block;
+    height: 84px;
+    width: 84px;
+    border-radius: 42px;
+    margin: 100px auto;
+}
+
+
+.neiR p{
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    margin-left: 200px;
+}
+
+.neiR p a{
+    color: #459dff;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
